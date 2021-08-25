@@ -11,13 +11,22 @@ end dec2to4;
 
 architecture WITH_SELECT of dec2to4 is
 begin
-
+  with input select
+    output <= "0001" when "00",
+              "0010" when "01",
+              "0100" when "10",
+              "1000" when "11",
+              (others => '0') when others; -- default case (won't happen here)
 end WITH_SELECT;
 
 -- Implement the decoder using a when-else statement
 
 architecture WHEN_ELSE of dec2to4 is
 begin
+  output <= "0001" when input = "00"
+            else "0010" when input = "01"
+            else "0100" when input = "10"
+            else "1000";
   
 end WHEN_ELSE;
 
@@ -26,11 +35,35 @@ end WHEN_ELSE;
 architecture IF_STATEMENT of dec2to4 is
 begin
 
+  process(input)
+  begin
+    if (input = "00") then
+      output <= "0001";
+    elsif (input = "01") then
+      output <= "0010";
+    elsif (input = "10") then
+      output <= "0100";
+    else
+      output <= "1000";
+    end if;
+  end process;
+
 end IF_STATEMENT;
 
 -- Implement the decoder using a case statement
 
 architecture CASE_STATEMENT of dec2to4 is
 begin
+
+  process(input)
+  begin
+    case input is
+      when "00" => output <= "0001";
+      when "01" => output <= "0010";
+      when "10" => output <= "0100";
+      when "11" => output <= "1000";
+      when others => null;
+    end case;
+  end process;
 
 end CASE_STATEMENT;
