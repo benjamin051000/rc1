@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../src/enc4to2/enc4to2.vhd" \
+"../../../../src/enc4to2/enc4to2_tb.vhd" \
+
+# Do not sort compile order
+nosort
