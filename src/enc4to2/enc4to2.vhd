@@ -12,7 +12,30 @@ end enc4to2;
 
 architecture IF_STATEMENT of enc4to2 is
 begin
+  process(input)
+  begin
+    if(in(3) = "1") then
+      valid <= '1';
+      output <= "11";
 
+    elsif(in(2) = '1') then
+      valid <= '1';
+      output <= "10";
+
+    elsif(in(1) = '1') then
+      valid <= '1';
+      output <= "01";
+
+    elsif(in(0) = '1') then
+      valid <= '1';
+      output <= "00";
+
+    else
+      valid <= '0';
+      output <= "00";
+
+    end if;
+  end process;
 end IF_STATEMENT;
 
 -- TODO: Implement the priority encoder using a case statement. Note that this
