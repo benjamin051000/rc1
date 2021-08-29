@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1630262779">
-  <File Type="PA-TCL" Name="enc4to2_tb.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="enc4to2_tb_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="enc4to2_tb_reports.tcl"/>
-  <File Type="RDS-RDS" Name="enc4to2_tb.vds"/>
-  <File Type="RDS-UTIL" Name="enc4to2_tb_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="enc4to2_tb_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="enc4to2_tb.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="enc4to2_tb_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="enc4to2_tb_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1630266686">
+  <File Type="PA-TCL" Name="mult_pipe.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mult_pipe_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="mult_pipe_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mult_pipe.vds"/>
+  <File Type="RDS-UTIL" Name="mult_pipe_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mult_pipe_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mult_pipe.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mult_pipe_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mult_pipe_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/src/enc4to2/enc4to2.vhd">
+    <File Path="$PPRDIR/src/mult_pipe/mult_pipe.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/enc4to2/enc4to2_tb.vhd">
+    <File Path="$PPRDIR/src/add_pipe/add_pipe.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -30,7 +31,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/dec2to4/dec2to4_tb.vhd">
+    <File Path="$PPRDIR/src/enc4to2/enc4to2.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -39,7 +40,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="enc4to2_tb"/>
+      <Option Name="TopModule" Val="mult_pipe"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
