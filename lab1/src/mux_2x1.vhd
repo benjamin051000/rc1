@@ -12,5 +12,5 @@ end mux_2x1;
 
 architecture BHV of mux_2x1 is
 begin
-    output <= in1 when sel = '1' else in2;
+    output <= in1 when sel = '0' else in2;
 end BHV;
