@@ -2,50 +2,63 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Aug 29 15:51:29 2021
-# Process ID: 26292
+# Start of session at: Sun Aug 29 16:51:43 2021
+# Process ID: 3844
 # Current directory: D:/Repos/reconfig/lab0/lab0.runs/synth_1
-# Command line: vivado.exe -log mult_pipe.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult_pipe.tcl
-# Log file: D:/Repos/reconfig/lab0/lab0.runs/synth_1/mult_pipe.vds
+# Command line: vivado.exe -log datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+# Log file: D:/Repos/reconfig/lab0/lab0.runs/synth_1/datapath.vds
 # Journal file: D:/Repos/reconfig/lab0/lab0.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source mult_pipe.tcl -notrace
-Command: synth_design -top mult_pipe -part xc7k70tfbv676-1
+source datapath.tcl -notrace
+Command: synth_design -top datapath -part xc7k70tfbv676-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4872
+INFO: [Synth 8-7075] Helper process launched with PID 27496
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'datapath' [D:/Repos/reconfig/lab0/src/datapath/datapath.vhd:24]
+INFO: [Synth 8-638] synthesizing module '\reg ' [D:/Repos/reconfig/lab0/src/datapath/reg.vhd:15]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (1#1) [D:/Repos/reconfig/lab0/src/datapath/reg.vhd:15]
 INFO: [Synth 8-638] synthesizing module 'mult_pipe' [D:/Repos/reconfig/lab0/src/mult_pipe/mult_pipe.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'mult_pipe' (1#1) [D:/Repos/reconfig/lab0/src/mult_pipe/mult_pipe.vhd:23]
+	Parameter width bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mult_pipe' (2#1) [D:/Repos/reconfig/lab0/src/mult_pipe/mult_pipe.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'add_pipe' [D:/Repos/reconfig/lab0/src/add_pipe/add_pipe.vhd:23]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'add_pipe' (3#1) [D:/Repos/reconfig/lab0/src/add_pipe/add_pipe.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (4#1) [D:/Repos/reconfig/lab0/src/datapath/datapath.vhd:24]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -62,10 +75,12 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP output0, operation Mode is: A*B.
-DSP Report: operator output0 is absorbed into DSP output0.
+DSP Report: Generating DSP U_34_MUL/output0, operation Mode is: A*B.
+DSP Report: operator U_34_MUL/output0 is absorbed into DSP U_34_MUL/output0.
+DSP Report: Generating DSP U_12_MUL/output0, operation Mode is: A*B.
+DSP Report: operator U_12_MUL/output0 is absorbed into DSP U_12_MUL/output0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -75,6 +90,7 @@ DSP: Preliminary Mapping Report (see note below)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult_pipe   | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mult_pipe   | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
@@ -87,13 +103,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -111,37 +127,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -158,40 +174,47 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |     1|
-|2     |DSP48E1 |     1|
-|3     |LUT2    |    32|
-|4     |FDCE    |     1|
-|5     |IBUF    |    35|
-|6     |OBUF    |    32|
+|2     |CARRY4  |     9|
+|3     |DSP48E1 |     2|
+|4     |LUT2    |    32|
+|5     |LUT3    |    32|
+|6     |FDCE    |    36|
+|7     |IBUF    |    68|
+|8     |OBUF    |    34|
 +------+--------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   102|
-+------+---------+-------+------+
++------+------------------+------------+------+
+|      |Instance          |Module      |Cells |
++------+------------------+------------+------+
+|1     |top               |            |   214|
+|2     |  U_12_MUL        |mult_pipe   |    33|
+|3     |  U_34_MUL        |mult_pipe_0 |     1|
+|4     |  U_SUM           |add_pipe    |    74|
+|5     |  U_VALID_IN_REG  |\reg        |     1|
+|6     |  U_VALID_OUT_REG |reg_1       |     1|
++------+------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.695 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1136.562 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1128.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1136.562 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1128.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 73bea4c1
+Synth Design complete, checksum: 18d4da59
 INFO: [Common 17-83] Releasing license: Synthesis
-14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1136.562 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Repos/reconfig/lab0/lab0.runs/synth_1/mult_pipe.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file mult_pipe_utilization_synth.rpt -pb mult_pipe_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug 29 15:51:47 2021...
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1128.695 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Repos/reconfig/lab0/lab0.runs/synth_1/datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 29 16:52:02 2021...

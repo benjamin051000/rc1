@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1630266686">
-  <File Type="PA-TCL" Name="mult_pipe.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mult_pipe_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="mult_pipe_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mult_pipe.vds"/>
-  <File Type="RDS-UTIL" Name="mult_pipe_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mult_pipe_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mult_pipe.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mult_pipe_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mult_pipe_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1630270300">
+  <File Type="PA-TCL" Name="datapath.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="datapath_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="datapath_reports.tcl"/>
+  <File Type="RDS-RDS" Name="datapath.vds"/>
+  <File Type="RDS-UTIL" Name="datapath_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="datapath_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="datapath.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="datapath_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="datapath_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/src/add_pipe/add_pipe.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/src/datapath/reg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/src/mult_pipe/mult_pipe.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/add_pipe/add_pipe.vhd">
+    <File Path="$PPRDIR/src/datapath/datapath.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -38,9 +49,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/src/mult_pipe/mult_pipe_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="mult_pipe"/>
+      <Option Name="TopModule" Val="datapath"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -56,7 +74,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
