@@ -72,6 +72,11 @@ begin
                 y_sel <= '0';
                 y_ld <= '1';
                 
+                -- Store n in internal register so 
+                -- the external circuit doesn't have 
+                -- to hold it there.
+                n_ld <= '1';
+
                 next_state <= LOOP_COND;
 
             when LOOP_COND =>
@@ -90,11 +95,11 @@ begin
 
                     next_state <= LOOP_COND;
                 else
+                    result_ld <= '1'; -- output y
                     next_state <= FINISHED;
                 end if;
 
             when FINISHED =>
-                result_ld <= '1'; -- output y
                 done <= '1';
                 next_state <= WAIT_FOR_GO_N;
             
