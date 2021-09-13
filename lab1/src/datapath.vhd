@@ -13,7 +13,7 @@ entity datapath is
         i_ld, x_ld, y_ld, n_ld, result_ld : in std_logic; -- REG load signals
         i_le_n : out std_logic; -- output (to controller)
 
-        done, result: out std_logic_vector(WIDTH-1 downto 0) -- user output
+        result: out std_logic_vector(WIDTH-1 downto 0) -- user output
     );
 end datapath;
 
