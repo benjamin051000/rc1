@@ -89,7 +89,7 @@ begin
         in1 => std_logic_vector(to_unsigned(3, WIDTH)),
         in2 => adder_i_sum,
         sel => i_sel,
-        out => mux_i_out
+        output => mux_i_out
     );
 
     U_mux_x: entity work.mux_2x1
@@ -98,7 +98,7 @@ begin
         in1 => std_logic_vector(to_unsigned(1, WIDTH)),
         in2 => reg_y_out,
         sel => x_sel,
-        out => mux_x_out
+        output => mux_x_out
     );
 
     U_mux_y: entity work.mux_2x1
@@ -107,7 +107,7 @@ begin
         in1 => std_logic_vector(to_unsigned(3, WIDTH)),
         in2 => adder_y_sum,
         sel => y_sel,
-        out => mux_y_out
+        output => mux_y_out
     );
 
     -----------------------------

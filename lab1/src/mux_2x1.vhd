@@ -6,7 +6,7 @@ entity mux_2x1 is
     port(
         in1, in2 : in std_logic_vector(WIDTH-1 downto 0);
         sel : in std_logic;
-        out : out std_logic_vector(WIDTH-1 downto 0)
+        output : out std_logic_vector(WIDTH-1 downto 0)
     );
 end mux_2x1;
 
