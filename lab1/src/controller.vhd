@@ -40,9 +40,9 @@ begin
         -- Default values
         next_state <= state;
         done <= '0';
-        i_sel <= '0';
-        x_sel <= '0';
-        y_sel <= '0';
+        i_sel <= '-';
+        x_sel <= '-';
+        y_sel <= '-';
         i_ld <= '0';
         x_ld <= '0';
         n_ld <= '0';
@@ -52,7 +52,6 @@ begin
 
             when RESET =>
                 -- result will be reset by rst signal in datapath
-                done <= '0';
                 next_state <= WAIT_FOR_GO;
             
             when WAIT_FOR_GO =>
@@ -104,6 +103,7 @@ begin
                 next_state <= WAIT_FOR_GO_N;
             
             when WAIT_FOR_GO_N =>
+                done <= '1';
                 if(go = '0') then
                     next_state <= WAIT_FOR_GO;
                 else

@@ -104,7 +104,7 @@ begin
     U_mux_y: entity work.mux_2x1
     generic map(WIDTH => WIDTH)
     port map(
-        in1 => std_logic_vector(to_unsigned(3, WIDTH)),
+        in1 => std_logic_vector(to_unsigned(1, WIDTH)),
         in2 => adder_y_sum,
         sel => y_sel,
         output => mux_y_out
