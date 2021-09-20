@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity tb is
-end tb;
+entity fib_tb is
+end fib_tb;
 
-architecture BHV of tb is
+architecture tb of fib_tb is
 
     constant TEST_WIDTH : positive := 8;
     constant TIMEOUT    : time     := TEST_WIDTH*100 ns;
@@ -105,4 +105,4 @@ begin
         tb_done <= '1';
         wait;
     end process;
-end BHV;
+end tb;
