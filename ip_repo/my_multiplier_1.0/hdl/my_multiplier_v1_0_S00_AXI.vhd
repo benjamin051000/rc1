@@ -117,6 +117,18 @@ architecture arch_imp of my_multiplier_v1_0_S00_AXI is
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal byte_index	: integer;
 	signal aw_en	: std_logic;
+	
+	-- Added by Benjamin Wheeler
+	signal multiplier_out : std_logic_vector(31 downto 0);
+	
+	component multiplier
+	port(
+	clk, rst: in std_logic;
+	in1    : in  std_logic_vector(15 downto 0);
+    in2    : in  std_logic_vector(15 downto 0);
+    output : out std_logic_vector(31 downto 0)
+	);
+	end component;
 
 begin
 	-- I/O Connections assignments
@@ -346,7 +358,7 @@ begin
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (slv_reg0, multiplier_out, slv_reg2, slv_reg3, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	    -- Address decoding for reading registers
@@ -355,7 +367,10 @@ begin
 	      when b"00" =>
 	        reg_data_out <= slv_reg0;
 	      when b"01" =>
-	        reg_data_out <= slv_reg1;
+	        -- Modified by Benjamin Wheeler
+--	        reg_data_out <= slv_reg1;
+            -- Output multiplier out
+            reg_data_out <= multiplier_out;
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
@@ -385,7 +400,14 @@ begin
 
 
 	-- Add user logic here
-
+    multiplier_0 : multiplier
+    port map(
+        clk => S_AXI_ACLK,
+        rst => '0',
+        in1 => slv_reg0(31 downto 16),
+        in2 => slv_reg0(15 downto 0),
+        output => multiplier_out
+     );
 	-- User logic ends
 
 end arch_imp;
