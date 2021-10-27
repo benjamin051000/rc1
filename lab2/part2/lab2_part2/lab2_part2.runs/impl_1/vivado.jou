@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Oct 16 17:09:06 2021
+# Process ID: 11288
+# Current directory: D:/Repos/reconfig/lab2/part2/lab2_part2/lab2_part2.runs/impl_1
+# Command line: vivado.exe -log part2_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source part2_wrapper.tcl -notrace
+# Log file: D:/Repos/reconfig/lab2/part2/lab2_part2/lab2_part2.runs/impl_1/part2_wrapper.vdi
+# Journal file: D:/Repos/reconfig/lab2/part2/lab2_part2/lab2_part2.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source part2_wrapper.tcl -notrace

@@ -63,3 +63,7 @@
 !*.xmp
 
 # End of https://www.toptal.com/developers/gitignore/api/xilinxvivado
+
+# Added by me
+# ignore all submission directories
+63975390/
