@@ -1,4 +1,4 @@
-.library ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -49,7 +49,7 @@ begin
         end if;    
     end process;
 
-    out <= adder_reg;
+    result <= adder_reg;
 
     -- Create a 3-cycle delay for the valid_out signal.
     process(clk, rst)
