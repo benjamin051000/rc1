@@ -67,3 +67,12 @@
 # Added by me
 # ignore all submission directories
 63975390/
+
+# include c/c++ files
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!Makefile
+# Perl files (for grading)
+!*.pl
