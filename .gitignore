@@ -67,6 +67,7 @@
 # Added by me
 # ignore all submission directories
 63975390/
+benjaminwheeler/
 
 # include c/c++ files
 !*.c
