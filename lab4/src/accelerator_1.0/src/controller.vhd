@@ -12,10 +12,10 @@ entity controller is
         go      : in std_logic;
         size    : in std_logic_vector(C_MEM_ADDR_WIDTH downto 0);
         done    : out std_logic;
-        in_en, out_en : in std_logic;
+        in_en, out_en : out std_logic;
 
-        pipeline_valid_in: in std_logic --Tells the pipeline when data has started going in
-        pipeline_valid_out : out std_logic -- Tells us when pipeline output is valid.
+        pipeline_valid_in: out std_logic; --Tells the pipeline when data has started going in
+        pipeline_valid_out : in std_logic -- Tells us when pipeline output is valid.
     );
 end controller;
 
@@ -28,6 +28,7 @@ architecture rtl of controller is
     signal size_reg, count : std_logic_vector(size'range);
 
     signal count_up : std_logic;
+    signal save_size_reg_en : std_logic;
 
 begin
     
@@ -44,7 +45,7 @@ begin
             state <= next_state;
 
             if(count_up = '1') then
-            count <= count + 1;
+            count <= std_logic_vector(unsigned(count) + to_unsigned(1, C_MEM_ADDR_WIDTH + 1));
             end if;
 
             if(save_size_reg_en = '1') then
@@ -69,7 +70,7 @@ begin
         case state is
             when WAIT_FOR_GO =>
                 if(go = '1') then
-                    next_state <= STATE_1;
+                    next_state <= SAVE_SIZE;
                 end if;
 
             when SAVE_SIZE =>
