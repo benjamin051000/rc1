@@ -1,4 +1,5 @@
--- Greg Stitt
+-- Benjamin Wheeler
+-- John Shoemaker
 -- University of Florida
 
 -- Entity: memory_map

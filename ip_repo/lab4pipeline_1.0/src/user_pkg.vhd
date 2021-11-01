@@ -1,4 +1,5 @@
--- Greg Stitt
+-- Benjamin Wheeler
+-- John Shoemaker
 -- University of Florida
 
 library ieee;

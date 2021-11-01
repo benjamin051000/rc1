@@ -1,5 +1,7 @@
--- Greg Stitt
+-- Benjamin Wheeler
+-- John Shoemaker
 -- University of Florida
+
 -- EEL 5721/4720 Reconfigurable Computing
 --
 -- File: user_app_tb.vhd
