@@ -18,7 +18,7 @@ end addr_gen;
 
 architecture rtl of addr_gen is
     -- Counters 
-    signal in_cnt, out_cnt : natural range 0 to C_MEM_ADDR_WIDTH-1;
+    signal in_cnt, out_cnt : natural range 0 to 32767;
 
 begin
 
