@@ -55,7 +55,7 @@ begin
         end if;
     end process;
 
-    process(state, go, size) -- todo add other stuff
+    process(state, go, size, pipeline_valid_out)
     begin
         
         -- Default cases
@@ -89,8 +89,7 @@ begin
                 -- Is the pipeline full yet?
                 if(pipeline_valid_out = '1') then
                     -- Pipeline is full. Valid data will start appearing on output.
-                    out_en <= '1'; -- Send addrs for output RAM
-                    
+                    out_en <= '1'; -- Send addrs for output RAM   
                     next_state <= VALID_OUTPUTS;
                 end if;
 
