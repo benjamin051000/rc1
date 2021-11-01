@@ -94,6 +94,7 @@ begin
                 end if;
 
             when VALID_OUTPUTS =>
+                done <= '1';
                 out_en <= '1';
                 in_en <= '1';
                 
