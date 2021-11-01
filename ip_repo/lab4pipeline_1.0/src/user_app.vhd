@@ -125,14 +125,13 @@ begin
     port map (
         clk => clk,
         rst => rst,
-        a => mem_in_rd_data(31 downto 22),
+        a => mem_in_rd_data(31 downto 24),
         b => mem_in_rd_data(23 downto 16),
         c => mem_in_rd_data(15 downto 8),
         d => mem_in_rd_data(7 downto 0),
         valid_in => mem_in_rd_addr_valid,
         valid_out => mem_out_wr_data_valid,
-        result => mem_out_wr_data -- TODO fit appropriately to ram
-    );
+        result => mem_out_wr_data); -- TODO fit appropriately to ram
 	
 	------------------------------------------------------------------------------
     -- output memory

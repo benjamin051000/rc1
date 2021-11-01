@@ -48,7 +48,7 @@ begin
             mult1_reg <= std_logic_vector(unsigned(a) * unsigned(b));
             mult2_reg <= std_logic_vector(unsigned(c) * unsigned(d));
             
-            adder_reg <= std_logic_vector(unsigned(mult1_reg) + unsigned(mult2_reg));
+            adder_reg <= std_logic_vector(resize(unsigned(mult1_reg), 17) + resize(unsigned(mult2_reg), 17));
 
         end if;    
     end process;

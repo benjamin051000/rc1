@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "d:/repos/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/synth_1/accelerator_v1_0.tcl"
+  variable script "c:/users/john/desktop/reconfig/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/synth_1/accelerator_v1_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,36 +70,37 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir d:/repos/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.cache/wt [current_project]
-set_property parent.project_path d:/repos/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr [current_project]
+set_property webtalk.parent_dir c:/users/john/desktop/reconfig/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.cache/wt [current_project]
+set_property parent.project_path c:/users/john/desktop/reconfig/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/benja/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/John/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
-set_property ip_repo_paths d:/Repos/reconfig/ip_repo [current_project]
+set_property ip_repo_paths c:/Users/John/Desktop/reconfig/reconfig/ip_repo [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/repos/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.cache/ip [current_project]
+set_property ip_output_repo c:/users/john/desktop/reconfig/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/config_pkg.vhd
-  D:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/user_pkg.vhd
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/memory_map.vhd
-  D:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/controller.vhd
-  D:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/addr_gen.vhd
-  D:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/ram.vhd
-  D:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/datapath.vhd
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/user_app.vhd
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/src/wrapper.vhd
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0_S00_AXI.vhd
-  d:/Repos/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/config_pkg.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/user_pkg.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/memory_map.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/controller.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/addr_gen.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/ram.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/datapath.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/user_app.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/wrapper.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0_S00_AXI.vhd
+  c:/Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

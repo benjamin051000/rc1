@@ -55,7 +55,7 @@ begin
         end if;
     end process;
 
-    process(state, go, size, pipeline_valid_out)
+    process(state, go, size, pipeline_valid_out, count)
     begin
         
         -- Default cases

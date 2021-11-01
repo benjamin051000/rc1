@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="55" Path="d:/repos/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr">
+<Project Version="7" Minor="55" Path="c:/users/john/desktop/reconfig/reconfig/lab4/lab4.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="26ed078b09de45f9aeb3f5ec31f8734b"/>
+    <Option Name="Id" Val="9534bf05ca5644e1a5ba476d44526f1d"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -50,11 +50,11 @@
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="SimulatorLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="avnet.com:zedboard:part0:1.4"/>
-    <Option Name="BoardPartRepoPaths" Val="C:/Users/benja/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store"/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../../../../../Users/John/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Repos/reconfig/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -95,85 +95,90 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/config_pkg.vhd">
-        <FileInfo RelPath="config_pkg.vhd">
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/user_pkg.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/memory_map.vhd">
-        <FileInfo RelPath="memory_map.vhd">
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/controller.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/addr_gen.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/ram.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/datapath.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/user_app.vhd">
-        <FileInfo RelPath="user_app.vhd">
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/src/wrapper.vhd">
-        <FileInfo RelPath="wrapper.vhd">
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/config_pkg.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/user_pkg.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/memory_map.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/controller.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/addr_gen.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/ram.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/datapath.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/user_app.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/src/wrapper.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0_S00_AXI.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="accelerator_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../Repos/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../Users/John/Desktop/reconfig/reconfig/ip_repo/lab4pipeline_1.0/hdl/accelerator_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
