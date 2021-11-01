@@ -18,7 +18,7 @@ end addr_gen;
 
 architecture rtl of addr_gen is
     -- Counters 
-    signal in_cnt, out_cnt : natural range 0 to C_MEM_ADDR_WIDTH-1;
+    signal in_cnt, out_cnt : natural range 0 to 32767;
 
 begin
 
@@ -26,27 +26,27 @@ begin
     process(clk, rst)
     begin
         if (rst = '1') then
-            in_count <= 0;
+            in_cnt <= 0;
             out_cnt <= 0;
         elsif (rising_edge(clk)) then
             
             -- Increment input address by size
-            if(input_en = '1') then
-                in_count <= in_count + 1;
+            if(in_en = '1') then
+                in_cnt <= in_cnt + 1;
             end if;
             
             -- Increment output address by 1
-            if(output_en = '1') then
-                out_count <= out_count + 1;
+            if(out_en = '1') then
+                out_cnt <= out_cnt + 1;
             end if;
         end if;
     end process;
 
     -- Enable output memory write when controller tells us to.
-    mem_out_wr_en <= '1' when output_en = '1' else '0';
+    mem_out_wr_en <= '1' when out_en = '1' else '0';
 
     -- Send the generated addresses to the RAMs.
-    mem_in_rd_addr <= std_logic_vector(to_unsigned(in_cnt, mem_in_rd_addr'range));
-    mem_out_wr_addr <= std_logic_vector(to_unsigned(out_cnt, mem_out_wr_addr'range));
+    mem_in_rd_addr <= std_logic_vector(to_unsigned(in_cnt, C_MEM_ADDR_WIDTH));
+    mem_out_wr_addr <= std_logic_vector(to_unsigned(out_cnt, C_MEM_ADDR_WIDTH));
 
 end rtl;
