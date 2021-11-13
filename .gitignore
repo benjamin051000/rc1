@@ -77,3 +77,4 @@ benjaminwheeler/
 !Makefile
 # Perl files (for grading)
 !*.pl
+!*.mdd
