@@ -1,0 +1,69 @@
+# Compile of config_pkg.vhd was successful.
+# Compile of delay.vhd was successful.
+# Compile of dest.vhd was successful.
+# Compile of memory_map.vhd failed with 3 errors.
+# Compile of source.vhd was successful.
+# Compile of user_app.vhd failed with 3 errors.
+# Compile of user_app_tb.vhd failed with 3 errors.
+# Compile of user_pkg.vhd was successful.
+# Compile of wrapper.vhd failed with 3 errors.
+# 9 compiles, 4 failed with 12 errors.
+# Compile of config_pkg.vhd was successful.
+# Compile of delay.vhd was successful.
+# Compile of dest.vhd was successful.
+# Compile of memory_map.vhd was successful with warnings.
+# Compile of source.vhd was successful.
+# Compile of user_app.vhd was successful.
+# Compile of user_app_tb.vhd was successful.
+# Compile of user_pkg.vhd was successful.
+# Compile of wrapper.vhd was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.user_app_tb
+# vsim -gui work.user_app_tb 
+# Start time: 22:00:40 on Nov 11,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.config_pkg
+# Loading work.user_pkg
+# Loading work.user_app_tb(behavior)
+# Loading ieee.math_real(body)
+# Loading work.user_app(default)
+# Loading work.memory_map(bhv)
+# Loading work.source(bhv)
+# Loading work.delay(ff)
+# Loading work.dest(bhv)
+add wave -position insertpoint sim:/user_app_tb/*
+# Compile of config_pkg.vhd was successful.
+# Compile of delay.vhd was successful.
+# Compile of dest.vhd was successful.
+# Compile of memory_map.vhd was successful with warnings.
+# Compile of source.vhd was successful.
+# Compile of user_app.vhd was successful.
+# Compile of user_app_tb.vhd was successful.
+# Compile of user_pkg.vhd was successful.
+# Compile of wrapper.vhd was successful.
+# 9 compiles, 0 failed with no errors.
+run -all
+# ** Note: SIMULATION FINISHED!!!
+#    Time: 268995 ns  Iteration: 0  Instance: /user_app_tb
+# ** Note: TOTAL ERRORS : 0
+#    Time: 268995 ns  Iteration: 0  Instance: /user_app_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.config_pkg
+# Loading work.user_pkg
+# Loading work.user_app_tb(behavior)
+# Loading work.user_app(default)
+# Loading work.memory_map(bhv)
+# Loading work.source(bhv)
+# Loading work.delay(ff)
+# Loading work.dest(bhv)
+run -all
+# ** Note: SIMULATION FINISHED!!!
+#    Time: 268995 ns  Iteration: 0  Instance: /user_app_tb
+# ** Note: TOTAL ERRORS : 0
+#    Time: 268995 ns  Iteration: 0  Instance: /user_app_tb
+# End time: 22:29:52 on Nov 11,2021, Elapsed time: 0:29:12
+# Errors: 0, Warnings: 1
