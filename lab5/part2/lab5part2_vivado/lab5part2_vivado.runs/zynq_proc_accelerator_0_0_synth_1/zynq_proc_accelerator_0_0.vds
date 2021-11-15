@@ -1,0 +1,400 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Nov 15 18:29:28 2021
+# Process ID: 14596
+# Current directory: C:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1
+# Command line: vivado.exe -log zynq_proc_accelerator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zynq_proc_accelerator_0_0.tcl
+# Log file: C:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1/zynq_proc_accelerator_0_0.vds
+# Journal file: C:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source zynq_proc_accelerator_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/John/Desktop/reconig/reconfig/lab5/part2'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/John/Desktop/reconig/reconfig/lab5/part2' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XiLink/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.cache/ip 
+Command: synth_design -top zynq_proc_accelerator_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13900
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1161.965 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zynq_proc_accelerator_0_0' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ip/zynq_proc_accelerator_0_0/synth/zynq_proc_accelerator_0_0.vhd:86]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'accelerator_v1_0' declared at 'c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0.vhd:5' bound to instance 'U0' of component 'accelerator_v1_0' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ip/zynq_proc_accelerator_0_0/synth/zynq_proc_accelerator_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0.vhd:52]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'accelerator_v1_0_S00_AXI' declared at 'c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0_S00_AXI.vhd:13' bound to instance 'accelerator_v1_0_S00_AXI_inst' of component 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'wrapper' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/wrapper.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'user_app' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/user_app.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'memory_map' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/memory_map.vhd:41]
+INFO: [Synth 8-226] default block is never used [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/memory_map.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'memory_map' (1#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/memory_map.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'ram_sync_read' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/ram.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'ram_sync_read' (2#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/ram.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'addr_gen_in' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/addr_gen_in.vhd:18]
+INFO: [Synth 8-226] default block is never used [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/addr_gen_in.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'addr_gen_in' (3#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/addr_gen_in.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'handshake' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/handshake.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'handshake' (4#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/handshake.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'datapath' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/datapath.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'delay' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'delay' (5#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (6#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/datapath.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'REG' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/reg.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'REG' (7#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/reg.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'REG__parameterized0' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/reg.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'REG__parameterized0' (7#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/reg.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'ram_sync_read__parameterized0' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/ram.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'ram_sync_read__parameterized0' (7#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/ram.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'addr_gen_out' [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/addr_gen_out.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'addr_gen_out' (8#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/addr_gen_out.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'user_app' (9#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/user_app.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'wrapper' (10#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/src/wrapper.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0_S00_AXI' (11#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0' (12#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ipshared/4576/hdl/accelerator_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'zynq_proc_accelerator_0_0' (13#1) [c:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.gen/sources_1/bd/zynq_proc/ip/zynq_proc_accelerator_0_0/synth/zynq_proc_accelerator_0_0.vhd:86]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1161.965 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1161.965 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1161.965 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1161.965 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1179.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1179.441 ; gain = 0.051
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'addr_gen_in'
+INFO: [Synth 8-802] inferred FSM for state register 'state_src_reg' in module 'handshake'
+INFO: [Synth 8-802] inferred FSM for state register 'state_dest_reg' in module 'handshake'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'addr_gen_out'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_init |                               00 |                               00
+            s_check_done |                               01 |                               01
+                  s_send |                               10 |                               10
+          s_wait_for_ack |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'addr_gen_in'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_ready |                               00 |                               00
+          s_wait_for_ack |                               01 |                               01
+             s_reset_ack |                               10 |                               10
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_src_reg' using encoding 'sequential' in module 'handshake'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_ready |                               00 |                               00
+              s_send_ack |                               01 |                               01
+             s_reset_ack |                               10 |                               10
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_dest_reg' using encoding 'sequential' in module 'handshake'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_init |                              000 |                              000
+            s_check_done |                              001 |                              001
+                  s_done |                              010 |                              100
+               s_restart |                              011 |                              101
+          s_wait_for_one |                              100 |                              010
+         s_wait_for_zero |                              101 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'addr_gen_out'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               20 Bit    Registers := 1     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 7     
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 24    
++---RAMs : 
+	            1024K Bit	(32768 X 32 bit)          RAMs := 1     
+	             544K Bit	(32768 X 17 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 20    
+	   6 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object                                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|zynq_proc_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg  | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|zynq_proc_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg | 32 K x 17(READ_FIRST)  | W |   | 32 K x 17(WRITE_FIRST) |   | R | Port A and B     | 0      | 17     | 
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object                                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|zynq_proc_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg  | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|zynq_proc_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg | 32 K x 17(READ_FIRST)  | W |   | 32 K x 17(WRITE_FIRST) |   | R | Port A and B     | 0      | 17     | 
++--------------------------+----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN/memory_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT/memory_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    37|
+|2     |LUT1     |     1|
+|3     |LUT2     |   141|
+|4     |LUT3     |    54|
+|5     |LUT4     |    91|
+|6     |LUT5     |    15|
+|7     |LUT6     |    95|
+|8     |RAMB36E1 |    49|
+|9     |FDCE     |   281|
+|10    |FDRE     |    55|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1179.441 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1179.441 ; gain = 17.477
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1179.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1179.441 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 1bd2cb6f
+INFO: [Common 17-83] Releasing license: Synthesis
+108 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1179.441 ; gain = 17.477
+INFO: [Common 17-1381] The checkpoint 'C:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1/zynq_proc_accelerator_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP zynq_proc_accelerator_0_0, cache-ID = fd902295f6e1db64
+INFO: [Coretcl 2-1174] Renamed 15 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/John/Desktop/reconig/reconfig/lab5/part2/lab5part2_vivado/lab5part2_vivado.runs/zynq_proc_accelerator_0_0_synth_1/zynq_proc_accelerator_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file zynq_proc_accelerator_0_0_utilization_synth.rpt -pb zynq_proc_accelerator_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 15 18:30:02 2021...
