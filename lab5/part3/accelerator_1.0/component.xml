@@ -169,7 +169,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>WIZ_DATA_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choices_0">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>WIZ_NUM_REG</spirit:name>
@@ -177,7 +177,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
-          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choices_1">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -242,11 +242,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>OFFSET_BASE_PARAM</spirit:name>
-            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_REG.OFFSET_BASE_PARAM" spirit:dependency="ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_REG.OFFSET_BASE_PARAM" spirit:dependency="ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_BASE_PARAM">0</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
-            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_REG.OFFSET_HIGH_PARAM" spirit:dependency="ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_REG.OFFSET_HIGH_PARAM" spirit:dependency="ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_HIGH_PARAM">0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:addressBlock>
@@ -261,7 +261,7 @@
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>accelerator_v1_0</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_12_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
@@ -269,7 +269,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9a8e2480</spirit:value>
+            <spirit:value>d08a13d6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -280,7 +280,7 @@
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>accelerator_v1_0</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_12_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
@@ -288,7 +288,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9a8e2480</spirit:value>
+            <spirit:value>d08a13d6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -316,7 +316,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dda4df14</spirit:value>
+            <spirit:value>0e5443b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -331,6 +331,21 @@
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
             <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>user_app_tb</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c762d781</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -389,12 +404,38 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>s00_axi_awaddr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">19</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -410,8 +451,8 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="immediate">2</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -454,7 +495,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -471,7 +512,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -513,8 +554,8 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="immediate">1</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -557,7 +598,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">19</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -573,8 +614,8 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="immediate">2</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -617,7 +658,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -633,8 +674,8 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="immediate">1</spirit:left>
-            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -671,32 +712,6 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
-      <spirit:port>
-        <spirit:name>s00_axi_aclk</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>s00_axi_aresetn</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -715,17 +730,18 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choices_0</spirit:name>
+      <spirit:name>choice_list_6fc15197</spirit:name>
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choices_1</spirit:name>
+      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
       <spirit:enumeration spirit:text="true">1</spirit:enumeration>
       <spirit:enumeration spirit:text="false">0</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choices_2</spirit:name>
-      <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
@@ -740,14 +756,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/delay.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/datapath.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/memory_map.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -756,15 +764,31 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/fifo17.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fifo32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/addr_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/delay.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo32/synth/fifo32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo32_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/datapath.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo17/synth/fifo17.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo17_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -786,6 +810,16 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>src/config_pkg.vhd</spirit:name>
@@ -793,14 +827,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>src/user_pkg.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/delay.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/datapath.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -812,15 +838,31 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/fifo17.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fifo32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/addr_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/delay.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo32/synth/fifo32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo32_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/datapath.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo17/synth/fifo17.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo17_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -841,6 +883,16 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>drivers/accelerator_v1_0/data/accelerator.mdd</spirit:name>
@@ -854,7 +906,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>drivers/accelerator_v1_0/src/Makefile</spirit:name>
-        <spirit:userFileType>unknown</spirit:userFileType>
         <spirit:userFileType>driver_src</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -878,8 +929,8 @@
       <spirit:file>
         <spirit:name>xgui/accelerator_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_0e5443b4</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
-        <spirit:userFileType>CHECKSUM_fd592ead</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -890,24 +941,13 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_12_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="12.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_12_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="12.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/user_app_tb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>Accelerator template</spirit:description>
@@ -916,11 +956,11 @@
       <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
       <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXI data bus</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choices_2" spirit:order="3">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -933,7 +973,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -945,7 +985,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -957,7 +997,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -976,20 +1016,106 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>accelerator_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-10-22T14:13:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-11-16T03:30:42Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ufl.edu:user:accelerator:1.0_ARCHIVE_LOCATION">C:/Users/gstitt/Desktop/rc_class/ip_repo/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60d96873_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5eaf3435_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c25104d_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1aad7ed8_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4746e288_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48d0c8c3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c4e0994_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e1899cd_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1824582b_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d959ab2_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@64a5a71_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7accc0d4_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@348cc617_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5235b626_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3973f9fd_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@352bc4db_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7344aaf7_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4af0c0d7_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7047bbdb_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60b94cfb_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b0b6af8_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5eb0c0d6_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e8d4c62_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6930376c_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@738a90ae_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4228604a_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5defd02f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18e20e04_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c4aa217_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42f6a78a_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@154f4634_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3abf3c00_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1824a08a_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@19c85403_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5b6b3e73_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5173e41a_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ee81090_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@593eeb09_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f1c09c1_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@708006fd_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10552420_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48cbcd10_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ff66608_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38e17a73_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@438e066a_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e960d36_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ad65aaf_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3193175f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4271413b_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6297051d_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@204c2fbd_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66a91daa_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e18e13c_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79d9e971_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79c292bf_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69e66aae_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48e04069_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6755315f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f9edec5_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61f889c1_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67b05392_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69600610_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b820df4_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1151c0b7_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67ccb21f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67e60072_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b54e05_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d69ffc2_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c6caba_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@471d4664_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70d55c15_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8e48de7_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c1c64f1_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@149def42_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@368213a6_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@193c0dfe_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3acab274_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1361c1c3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25290ff3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a5b1db0_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56f39e74_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2624d084_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4843d62c_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ca1d32_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7170f24d_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@792ecdf3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2015.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="01246c21"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="cafe3ba6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3f0dc71a"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7520d658"/>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a6aebf4"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ebdd79b6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0f793b36"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="6d40093a"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="72da4266"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a92f8a7e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="760df5fd"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

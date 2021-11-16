@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../accelerator_1.0/src/config_pkg.vhd" \
+"../../../../../accelerator_1.0/src/user_pkg.vhd" \
+"../../../../../accelerator_1.0/src/user_app.vhd" \
+"../../../../../accelerator_1.0/src/user_app_tb.vhd" \
+
+# Do not sort compile order
+nosort

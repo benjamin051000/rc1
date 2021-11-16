@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Nov 15 22:32:48 2021
+# Process ID: 15324
+# Current directory: C:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.runs/synth_1
+# Command line: vivado.exe -log part3_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source part3_wrapper.tcl
+# Log file: C:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.runs/synth_1/part3_wrapper.vds
+# Journal file: C:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source part3_wrapper.tcl -notrace

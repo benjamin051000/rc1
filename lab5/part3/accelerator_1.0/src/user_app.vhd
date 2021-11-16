@@ -1,4 +1,4 @@
--- Greg Stitt
+-- John Shoemaker and Benjamin Wheeler
 -- University of Florida
 
 library ieee;
@@ -153,7 +153,7 @@ begin
     -- there will be outstanding memory reads when the FIFO is actually full. The
     -- almost_full flag ensures enough room for an outstanding request when
     -- the read latency is 1 cycle.
-    U_MEM_IN_FIFO : entity work.fifo32
+   U_MEM_IN_FIFO : entity work.fifo32_1
         port map (
             clk_src     => clks(0),
             clk_dest    => clks(1),
@@ -198,7 +198,7 @@ begin
 
     -- output FIFO. This FIFO does not require the almost_full flag because the
     -- datapath can immediately stall, which prevents data loss.
-    U_MEM_OUT_FIFO : entity work.fifo17
+ U_MEM_OUT_FIFO : entity work.fifo17_1
         port map (
             clk_src  => clks(1),
             clk_dest => clks(0),

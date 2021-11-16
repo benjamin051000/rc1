@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Nov 15 22:29:24 2021
+# Process ID: 12176
+# Current directory: c:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/impl_1
+# Command line: vivado.exe -log accelerator_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source accelerator_v1_0.tcl -notrace
+# Log file: c:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/impl_1/accelerator_v1_0.vdi
+# Journal file: c:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator_v1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/John/Desktop/reconig/reconfig/lab5/part3'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/John/Desktop/reconig/reconfig/lab5/part3' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/John/Desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/impl_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XiLink/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/users/john/desktop/reconig/reconfig/lab5/part3/lab5part3_vivado/lab5part3_vivado.tmp/accelerator_v1_0_project/accelerator_v1_0_project.cache/ip 
+Command: link_design -top accelerator_v1_0 -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1138.230 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'fifo_generator_v13_2_5' instantiated as 'accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN_FIFO/U_FIFO_32/U0'. 2 instances of this cell are unresolved black boxes. [C:/Users/John/Desktop/reconig/reconfig/lab5/part3/accelerator_1.0/src/fifo32/synth/fifo32.vhd:547]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.230 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+9 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1138.230 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_IN_FIFO/U_FIFO_32/U0' of type 'fifo_generator_v13_2_5' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_USER_APP/U_MEM_OUT_FIFO/U_FIFO_17/U0' of type 'fifo_generator_v13_2_5' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 2 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.868 . Memory (MB): peak = 1138.230 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 2 Warnings, 1 Critical Warnings and 3 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 15 22:29:34 2021...

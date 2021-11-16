@@ -1,0 +1,18 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../accelerator_1.0/src/config_pkg.vhd" \
+"../../../../../../../accelerator_1.0/src/user_pkg.vhd" \
+"../../../../../../../accelerator_1.0/src/memory_map.vhd" \
+"../../../../../../../accelerator_1.0/src/ram.vhd" \
+"../../../../../../../accelerator_1.0/src/addr_gen.vhd" \
+"../../../../../../../accelerator_1.0/src/delay.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo32/synth/fifo32.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo32_1.vhd" \
+"../../../../../../../accelerator_1.0/src/datapath.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo17/synth/fifo17.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo17_1.vhd" \
+"../../../../../../../accelerator_1.0/src/user_app.vhd" \
+"../../../../../../../accelerator_1.0/src/user_app_tb.vhd" \
+
+# Do not sort compile order
+nosort
