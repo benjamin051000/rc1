@@ -90,7 +90,7 @@ set_property ip_output_repo c:/Users/John/Desktop/reconfig/reconfig/final_lab/fi
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
 add_files C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.srcs/sources_1/bd/block_design/block_design.bd
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_processing_system7_0_0/block_design_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32.xdc]

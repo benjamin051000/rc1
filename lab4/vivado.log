@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Nov 29 08:10:00 2021
+# Process ID: 5380
+# Current directory: C:/Users/John/Desktop/reconfig/reconfig/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11956 C:\Users\John\Desktop\reconfig\reconfig\lab4\lab4.xpr
+# Log file: C:/Users/John/Desktop/reconfig/reconfig/lab4/vivado.log
+# Journal file: C:/Users/John/Desktop/reconfig/reconfig/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.xpr
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/benja/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.gen/sources_1'.
+INFO: [BD 41-2613] The output directory c:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.gen/sources_1/bd/zynq_bdf for zynq_bdf cannot be found.
+WARNING: [BD 41-2576] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_processing_system7_0_0/zynq_bdf_processing_system7_0_0.xci' referenced by design 'zynq_bdf' could not be found.
+WARNING: [BD 41-2576] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_auto_pc_0/zynq_bdf_auto_pc_0.xci' referenced by design 'zynq_bdf' could not be found.
+WARNING: [BD 41-2576] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_ps7_0_axi_periph_0/zynq_bdf_ps7_0_axi_periph_0.xci' referenced by design 'zynq_bdf' could not be found.
+WARNING: [BD 41-2576] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_rst_ps7_0_100M_0/zynq_bdf_rst_ps7_0_100M_0.xci' referenced by design 'zynq_bdf' could not be found.
+WARNING: [BD 41-2576] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_accelerator_0_1/zynq_bdf_accelerator_0_1.xci' referenced by design 'zynq_bdf' could not be found.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'zynq_bdf_processing_system7_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'zynq_bdf_rst_ps7_0_100M_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'zynq_bdf_accelerator_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+WARNING: [Project 1-533] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_rst_ps7_0_100M_0/zynq_bdf_rst_ps7_0_100M_0.xci' could not be found in the subdesign 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/zynq_bdf.bd', but fileset 'zynq_bdf_rst_ps7_0_100M_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_processing_system7_0_0/zynq_bdf_processing_system7_0_0.xci' could not be found in the subdesign 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/zynq_bdf.bd', but fileset 'zynq_bdf_processing_system7_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/ip/zynq_bdf_accelerator_0_1/zynq_bdf_accelerator_0_1.xci' could not be found in the subdesign 'C:/Users/John/Desktop/reconfig/reconfig/lab4/lab4.srcs/sources_1/bd/zynq_bdf/zynq_bdf.bd', but fileset 'zynq_bdf_accelerator_0_1' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/John/Desktop/reconfig/reconfig/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XiLink/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1127.477 ; gain = 0.000
+update_compile_order -fileset sources_1

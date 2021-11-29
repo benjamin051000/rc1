@@ -17,72 +17,70 @@ WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal pa
 Current IP cache path is c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.cache/ip 
 Command: synth_design -top block_design_accelerator_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
-WARNING: [IP_Flow 19-3571] IP 'block_design_accelerator_0_0' is restricted:
-* IP definition 'accelerator_v1.0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:fifo_generator:12.0
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13012
+INFO: [Synth 8-7075] Helper process launched with PID 16792
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1141.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'block_design_accelerator_0_0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/synth/block_design_accelerator_0_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 20 - type: integer 
-INFO: [Synth 8-3491] module 'accelerator_v1_0' declared at 'c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0.vhd:5' bound to instance 'U0' of component 'accelerator_v1_0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/synth/block_design_accelerator_0_0.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0.vhd:52]
+INFO: [Synth 8-3491] module 'accelerator_v1_0' declared at 'c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0.vhd:5' bound to instance 'U0' of component 'accelerator_v1_0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/synth/block_design_accelerator_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0.vhd:52]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 20 - type: integer 
-INFO: [Synth 8-3491] module 'accelerator_v1_0_S00_AXI' declared at 'c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0_S00_AXI.vhd:13' bound to instance 'accelerator_v1_0_S00_AXI_inst' of component 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0_S00_AXI.vhd:97]
-INFO: [Synth 8-638] synthesizing module 'wrapper' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:26]
-INFO: [Synth 8-638] synthesizing module 'user_app' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/user_app.vhd:66]
-INFO: [Synth 8-638] synthesizing module 'memory_map' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/memory_map.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'memory_map' (1#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/memory_map.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'ctrl' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/ctrl.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ctrl' (2#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/ctrl.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'user_app' (3#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/user_app.vhd:66]
-INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_RD' of component 'dram_rd_ram0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:242]
-INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_WR' of component 'dram_wr_ram0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:267]
-INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_RD' of component 'dram_rd_ram1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:290]
-INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_WR' of component 'dram_wr_ram1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:315]
-INFO: [Synth 8-638] synthesizing module 'dram_model' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/dram_model.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'ram_sync_read' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/ram.vhd:117]
-INFO: [Synth 8-256] done synthesizing module 'ram_sync_read' (4#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/ram.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized0' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized1' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'dram_model' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/dram_model.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'dram_model__parameterized0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/dram_model.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized2' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized2' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized3' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized3' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/delay.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'dram_model__parameterized0' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/dram_model.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'wrapper' (7#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/src/wrapper.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0_S00_AXI' (8#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0_S00_AXI.vhd:97]
-INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0' (9#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/8da8/hdl/accelerator_v1_0.vhd:52]
+INFO: [Synth 8-3491] module 'accelerator_v1_0_S00_AXI' declared at 'c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0_S00_AXI.vhd:13' bound to instance 'accelerator_v1_0_S00_AXI_inst' of component 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0_S00_AXI' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'wrapper' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'user_app' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/user_app.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'memory_map' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/memory_map.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'memory_map' (1#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/memory_map.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'ctrl' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/ctrl.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ctrl' (2#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/ctrl.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'user_app' (3#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/user_app.vhd:66]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_RD' of component 'dram_rd_ram0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:242]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_WR' of component 'dram_wr_ram0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:267]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_RD' of component 'dram_rd_ram1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:290]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_WR' of component 'dram_wr_ram1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:315]
+INFO: [Synth 8-638] synthesizing module 'dram_model' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'ram_sync_read' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/ram.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'ram_sync_read' (4#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/ram.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized0' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized1' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized1' (5#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'dram_model' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'dram_model__parameterized0' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized2' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized2' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_delay__parameterized3' [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_delay__parameterized3' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'dram_model__parameterized0' (6#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/dram_model.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'wrapper' (7#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/src/wrapper.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0_S00_AXI' (8#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0' (9#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ipshared/6638/hdl/accelerator_v1_0.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'block_design_accelerator_0_0' (10#1) [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/synth/block_design_accelerator_0_0.vhd:86]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1158.230 ; gain = 16.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1158.230 ; gain = 16.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1158.230 ; gain = 16.691
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1158.230 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -97,26 +95,26 @@ CRITICAL WARNING: [Designutils 20-1280] Could not find module 'fifo_32_prog_full
 CRITICAL WARNING: [Designutils 20-1280] Could not find module 'fifo_32'. The XDC file c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32_clocks.xdc will not be read for any cell of this module.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1197.066 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1198.453 ; gain = 1.387
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ctrl'
 ---------------------------------------------------------------------------------------------------
@@ -128,7 +126,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ctrl'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -171,7 +169,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -193,13 +191,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -284,7 +282,7 @@ INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_ins
 INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -302,37 +300,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -385,11 +383,11 @@ Report Cell Usage:
 |16    |FDRE              |    88|
 +------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1168.703 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1168.703 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1198.453 ; gain = 16.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1198.453 ; gain = 56.914
 INFO: [Project 1-571] Translating synthesized netlist
 Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/dram_cores/dram_rd_ram0.edn]
 Finished Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/dram_cores/dram_rd_ram0.edn]
@@ -399,7 +397,7 @@ Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_v
 Finished Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/dram_cores/dram_rd_ram1.edn]
 Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/dram_cores/dram_wr_ram1.edn]
 Finished Parsing EDIF File [c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/dram_cores/dram_wr_ram1.edn]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1179.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1198.453 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.2
@@ -813,18 +811,18 @@ CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through
 CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/dram_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/dram_clk_IBUF_inst.
 CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/user_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/user_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/user_clk_IBUF_inst.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1203.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1206.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: db629358
 INFO: [Common 17-83] Releasing license: Synthesis
-123 Infos, 204 Warnings, 10 Critical Warnings and 0 Errors encountered.
+123 Infos, 203 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1203.844 ; gain = 35.141
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1206.555 ; gain = 65.016
 INFO: [Common 17-1381] The checkpoint 'C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.runs/block_design_accelerator_0_0_synth_1/block_design_accelerator_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 79 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.runs/block_design_accelerator_0_0_synth_1/block_design_accelerator_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file block_design_accelerator_0_0_utilization_synth.rpt -pb block_design_accelerator_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 28 19:19:43 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 29 10:36:57 2021...

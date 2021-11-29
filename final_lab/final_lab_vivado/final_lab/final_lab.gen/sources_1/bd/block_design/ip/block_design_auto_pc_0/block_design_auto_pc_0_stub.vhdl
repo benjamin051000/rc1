@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Sun Nov 28 19:20:14 2021
+-- Date        : Sun Nov 28 19:20:13 2021
 -- Host        : DESKTOP-UNKKMEU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_auto_pc_0/block_design_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top block_design_auto_pc_0 -prefix
+--               block_design_auto_pc_0_ block_design_auto_pc_0_stub.vhdl
 -- Design      : block_design_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

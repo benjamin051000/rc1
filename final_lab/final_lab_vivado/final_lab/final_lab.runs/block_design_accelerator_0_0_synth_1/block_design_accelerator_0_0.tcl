@@ -91,7 +91,7 @@ set_property ip_output_repo c:/Users/John/Desktop/reconfig/reconfig/final_lab/fi
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.srcs/sources_1/bd/block_design/ip/block_design_accelerator_0_0/block_design_accelerator_0_0.xci
+read_ip -quiet C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.srcs/sources_1/bd/block_design/ip/block_design_accelerator_0_0/block_design_accelerator_0_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/fifo_32_prog_full.xdc]

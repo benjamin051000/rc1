@@ -14,7 +14,7 @@ entity dram_rd_ram0_custom is
         clear      : in  std_logic;
         go         : in  std_logic;
         rd_en      : in  std_logic;
-        stall      : in  std_logic;
+        stall      : in  std_logic; 
         start_addr : in  std_logic_vector(14 downto 0);
         size       : in  std_logic_vector(16 downto 0);
         valid      : out std_logic;
@@ -34,6 +34,74 @@ end entity;
 
 architecture arch of dram_rd_ram0_custom is
 
+    signal address_gen_in_en     : std_logic;
+    signal address_gen_out_en    : std_logic;
+    signal size_sig              : std_logic_vector(16 downto 0);
+    signal start_addr_sig        : std_logic_vector(14 downto 0);
+
 begin
+
+    --handshake to send control signals from user app to the address generator
+    U_HANDSHAKE : entity work.handshake_custom
+        port map(
+            clk_src => user_clk,
+            clk_dest  => dram_clk,
+            rst       => rst,
+            go        => go,
+            delay_ack => open,
+            rcv       => open,
+            ack       => open
+        );
+
+    U_SIZE_REG : entity work.reg_custom
+        generic map (
+            WIDTH => 17 --16 downto 0
+        )
+        port map(
+            clk => go, --store size whenever go is asserted
+            rst => rst,
+            en => C_1, --enabled always
+            input => size,
+            output => size_sig --to address generator
+        );
+
+    U_START_ADDRESS_REG : entity work.reg_custom
+        generic map (
+            WIDTH => 15 --14 downto 0
+        )
+        port map(
+            clk => go, --store size whenever go is asserted
+            rst => rst,
+            en => C_1, --enabled always
+            input => start_addr,
+            output => start_addr_sig --to address generator
+        );
+
+    U_ADDR_GEN : entity work.address_gen_custom
+        port map(
+            clk    => dram_clk,
+            rst    => rst,
+            go     => open, --comes from handshake
+            size   => size_sig,
+            start_addr => start_addr_sig,
+            done   => open, --might not need if theres a counter on user side
+            dram_ready  => dram_ready,
+            rd_addr  => dram_rd_addr,
+            rd_en  =>  dram_rd_en
+        );
+
+    U_FIFO : entity work.fifo_32_to_16_custom
+        port map(
+            clk_src     => dram_clk,
+            clk_dest    => user_clk,
+            rst         => rst,
+            empty       => (not valid); --data is valid when the fifo is not empty
+            full        => open, --not used
+            prog_full   => open, --to address gen, tells it when to stop 
+            rd          => rd_en, 
+            wr          => dram_rd_valid,
+            data_in     => dram_rd_data,
+            data_out    => open --todo, need to check this data for clipping before giving it to user_app
+        );
 
 end arch;
