@@ -34,10 +34,9 @@ end entity;
 
 architecture arch of dram_rd_ram0_custom is
 
-    signal address_gen_in_en     : std_logic;
-    signal address_gen_out_en    : std_logic;
     signal size_sig              : std_logic_vector(16 downto 0);
     signal start_addr_sig        : std_logic_vector(14 downto 0);
+    signal fifo_prog_full_sig    : std_logic;
 
 begin
 
@@ -84,9 +83,10 @@ begin
             go     => open, --comes from handshake
             size   => size_sig,
             start_addr => start_addr_sig,
-            done   => open, --might not need if theres a counter on user side
+            done   => open, --not used
             dram_ready  => dram_ready,
             rd_addr  => dram_rd_addr,
+            fifo_prog_full =>  fifo_prog_full_sig,
             rd_en  =>  dram_rd_en
         );
 
@@ -97,11 +97,20 @@ begin
             rst         => rst,
             empty       => (not valid); --data is valid when the fifo is not empty
             full        => open, --not used
-            prog_full   => open, --to address gen, tells it when to stop 
+            prog_full   => fifo_prog_full_sig, --to address gen, tells it when to stop 
             rd          => rd_en, 
             wr          => dram_rd_valid,
             data_in     => dram_rd_data,
-            data_out    => open --todo, need to check this data for clipping before giving it to user_app
+            data_out    => data --todo?? need to check this data for clipping before giving it to user_app
+        );
+
+    U_DONE_COUNTER : entity work.done_counter_custom
+        port map(
+            clk => user_clk,
+            rst => rst,
+            en  => rd_en,
+            size  => size_sig,
+            done => done
         );
 
 end arch;

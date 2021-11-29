@@ -22,8 +22,10 @@ entity address_gen_custom is
         --dram side
         dram_ready    : in std_logic;
         rd_addr       : out std_logic_vector(14 downto 0);
-        rd_en         : out std_logic
+        rd_en         : out std_logic;
 
+        --misc
+        fifo_prog_full : in std_logic
     );
 end address_gen_custom;
 
