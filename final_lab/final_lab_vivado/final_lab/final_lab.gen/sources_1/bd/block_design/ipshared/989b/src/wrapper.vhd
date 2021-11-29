@@ -1,6 +1,6 @@
--- Greg Stitt
--- University of Florida
-
+--John Shoemaker and Benjamin Wheeler
+--EEL5721 Reconfigurable Computing 
+--Final Project
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -89,7 +89,8 @@ architecture default of wrapper is
 
     signal sw_rst, rst_s : std_logic;
 
-    component dram_rd_ram0
+    -- component dram_rd_ram0 --replace this to get back to stitt's code
+    component dram_rd_ram0_custom
         port(dram_clk   : in  std_logic;
              user_clk   : in  std_logic;
              rst        : in  std_logic;
@@ -239,7 +240,32 @@ begin
     ----------------------------------------------------------------------
     -- Instantiate DMA controllers
 
-    U_DRAM0_RD : dram_rd_ram0
+    --STITT CODE, REPLACED WITH OUR OWN
+   -- U_DRAM0_RD : dram_rd_ram0
+     --   port map (
+            -- user dma control signals
+       --     dram_clk   => clks(C_CLK_DRAM),
+       --     user_clk   => clks(C_CLK_USER),
+       --     rst        => rst_s,
+       --     clear      => ram0_rd_clear,
+       --     go         => ram0_rd_go,
+       --     rd_en      => ram0_rd_rd_en,
+       --     stall      => C_0,
+       --     start_addr => ram0_rd_addr,
+       --     size       => ram0_rd_size,
+       --     valid      => ram0_rd_valid,
+       --     data       => ram0_rd_data,
+       --     done       => ram0_rd_done,
+       --
+            -- dram control signals
+       --     dram_ready    => dram0_ready,
+       --     dram_rd_en    => dram0_rd_en,
+       --     dram_rd_addr  => dram0_rd_addr,
+       --     dram_rd_data  => dram0_rd_data,
+       --     dram_rd_valid => dram0_rd_valid,
+       --     dram_rd_flush => dram0_rd_flush);
+
+    U_DRAM0_RD_CUST : dram_rd_ram0_custom
         port map (
             -- user dma control signals
             dram_clk   => clks(C_CLK_DRAM),
@@ -254,7 +280,7 @@ begin
             valid      => ram0_rd_valid,
             data       => ram0_rd_data,
             done       => ram0_rd_done,
-
+       
             -- dram control signals
             dram_ready    => dram0_ready,
             dram_rd_en    => dram0_rd_en,

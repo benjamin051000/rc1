@@ -1,0 +1,220 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Nov 29 12:40:44 2021
+| Host         : DESKTOP-UNKKMEU running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file block_design_wrapper_bus_skew_routed.rpt -pb block_design_wrapper_bus_skew_routed.pb -rpx block_design_wrapper_bus_skew_routed.rpx
+| Design       : block_design_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   11        [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]}]]
+                                              [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]}]]
+                                                                              Slow              8.000       0.988      7.012
+2   13        [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]}]]
+                                              [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]}]]
+                                                                              Slow              8.000       0.969      7.031
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]}]] -to [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]}]] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_1            clk_fpga_0            block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         0.988      7.012
+
+
+Slack (MET) :             7.012ns  (requirement - actual skew)
+  Endpoint Source:        block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1)
+  Endpoint Destination:   block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Source:       block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1)
+  Reference Destination:  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    1.642ns
+  Reference Relative Delay:   0.333ns
+  Relative CRPR:              0.494ns
+  Uncertainty:                0.173ns
+  Actual Bus Skew:            0.988ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.193     1.193    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     1.294 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=618, routed)         1.699     2.993    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X54Y69         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y69         FDRE (Prop_fdre_C_Q)         0.478     3.471 r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.654     4.125    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    SLICE_X54Y67         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1461, routed)        1.528     2.707    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X54Y67         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.707    
+    SLICE_X54Y67         FDRE (Setup_fdre_C_D)       -0.224     2.483    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           4.125    
+                         clock arrival                          2.483    
+  -------------------------------------------------------------------
+                         relative delay                         1.642    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.088     1.088    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091     1.179 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=618, routed)         1.528     2.707    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X55Y67         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y67         FDRE (Prop_fdre_C_Q)         0.367     3.074 r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.425     3.499    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[4]
+    SLICE_X56Y67         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1461, routed)        1.703     2.997    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X56Y67         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism              0.000     2.997    
+    SLICE_X56Y67         FDRE (Hold_fdre_C_D)         0.169     3.166    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
+  -------------------------------------------------------------------
+                         data arrival                           3.499    
+                         clock arrival                          3.166    
+  -------------------------------------------------------------------
+                         relative delay                         0.333    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]}]] -to [get_cells [list {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]}]] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_0            clk_fpga_1            block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                            block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         0.969      7.031
+
+
+Slack (MET) :             7.031ns  (requirement - actual skew)
+  Endpoint Source:        block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Endpoint Destination:   block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1)
+  Reference Source:       block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Destination:  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    1.715ns
+  Reference Relative Delay:   0.389ns
+  Relative CRPR:              0.530ns
+  Uncertainty:                0.173ns
+  Actual Bus Skew:            0.969ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1461, routed)        1.700     2.994    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X57Y69         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y69         FDRE (Prop_fdre_C_Q)         0.419     3.413 r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.742     4.155    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[6]
+    SLICE_X56Y69         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.088     1.088    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091     1.179 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=618, routed)         1.526     2.705    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X56Y69         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     2.705    
+    SLICE_X56Y69         FDRE (Setup_fdre_C_D)       -0.265     2.440    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+  -------------------------------------------------------------------
+                         data arrival                           4.155    
+                         clock arrival                          2.440    
+  -------------------------------------------------------------------
+                         relative delay                         1.715    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1461, routed)        1.526     2.705    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X59Y70         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y70         FDRE (Prop_fdre_C_Q)         0.367     3.072 r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.478     3.550    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[4]
+    SLICE_X57Y71         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  block_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.193     1.193    block_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     1.294 r  block_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=618, routed)         1.698     2.992    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X57Y71         FDRE                                         r  block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism              0.000     2.992    
+    SLICE_X57Y71         FDRE (Hold_fdre_C_D)         0.169     3.161    block_design_i/accelerator_0/U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD_CUST/U_FIFO/U_FIFO_CUSTOM/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
+  -------------------------------------------------------------------
+                         data arrival                           3.550    
+                         clock arrival                          3.161    
+  -------------------------------------------------------------------
+                         relative delay                         0.389    
+
+
+

@@ -269,7 +269,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b4b5a319</spirit:value>
+            <spirit:value>ad16d4ab</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -288,7 +288,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3bed421f</spirit:value>
+            <spirit:value>c26b0745</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -763,10 +763,6 @@
         <spirit:userFileType>edn</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/dram_cores/dram_rd_ram0.edn</spirit:name>
-        <spirit:userFileType>edn</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/config_pkg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -808,6 +804,34 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/accelerator_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/address_gen_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/done_counter_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/handshake_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/reg_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo_32_to_16.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo_32_to_16_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/dram_rd_ram0_custom.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -878,6 +902,34 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/accelerator_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/address_gen_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/done_counter_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/handshake_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/reg_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo_32_to_16.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fifo_32_to_16_custom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/dram_rd_ram0_custom.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1019,8 +1071,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>accelerator_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-11-29T15:35:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-11-29T17:36:41Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ufl.edu:user:accelerator:1.0_ARCHIVE_LOCATION">C:/Users/gstitt/Desktop/rc_class/ip_repo/accelerator_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@67fe2319_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
@@ -1043,13 +1095,48 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@1cdd3847_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@7d72b95f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@59077510_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ff795ff_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38525e09_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76e98f92_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2bd9ac0d_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48c15129_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@618f64ac_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b22341c_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22925922_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78f6c92c_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6387f036_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c53a418_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2696d8f3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69fb26b4_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@336be81f_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@350a2327_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30b7ec5_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7fd33434_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@13c398bf_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ee430ae_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@128a9b50_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@127c5d73_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@220b79fc_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25d9d5d3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ace3a83_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@295573e3_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c570299_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9d4c06d_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36f6299_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22759881_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1afc4516_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17e3ac75_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ecb1bb4_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7824546b_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1cdcfa0_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8283d4b_ARCHIVE_LOCATION">c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b1c5cd83"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="cafe3ba6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5fb270e4"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ebdd79b6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e58fad8e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b1ec4633"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="72da4266"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="760df5fd"/>
