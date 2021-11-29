@@ -14,6 +14,7 @@
 #include <fcntl.h>
 
 #include "Board.h"
+#include "Timer.h"
 
 using namespace std;
 
@@ -50,6 +51,22 @@ Board::~Board() {
 
   delete mmapPages;
 }
+
+
+void Board::waitUntilNotZero(unsigned long addr, float timeout) {
+  
+  Timer waitTime;
+  unsigned value = 0;
+  waitTime.start();
+  while (!value && waitTime.elapsedTime() < timeout) {
+    this->read(&value, addr, 1);
+  }
+  waitTime.stop();
+
+  if (value == 0)
+    throw TimeoutException();
+}
+
 
 /*
 void Board::setClockStatus(unsigned clk, bool enable) {

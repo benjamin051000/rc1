@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "Convolve.h"
+#include "Timer.h"
 
 using namespace std;
 
@@ -14,7 +15,7 @@ Kernel::Kernel(const appWord_t *kernel, unsigned int size) {
 
   if (size > Convolve::MAX_KERNEL_SIZE) {
       cerr << "Current FPGA implemenetation doesn't support kernels larger than " << Convolve::MAX_KERNEL_SIZE << endl;
-      throw 1;
+      throw KernelSizeException();
   }
   
   // kernel transferred to the FPGA needs to be 32 bits
@@ -140,6 +141,21 @@ void Convolve::getOutput(appWord_t *output, unsigned int outputSize) {
   read(output, 0, outputSize);
 }
 
+
+void Convolve::waitUntilDone(float timeout) {
+
+  Timer waitTime;
+  unsigned value = 0;
+  waitTime.start();
+  while (!value && waitTime.elapsedTime() < timeout) {
+    this->read(&value, DONE_ADDR, 1);
+  }
+  waitTime.stop();
+
+  if (value == 0) {
+    throw TimeoutException();
+  }
+}
 
 bool Convolve::isDone() {
   

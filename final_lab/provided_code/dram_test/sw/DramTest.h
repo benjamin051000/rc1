@@ -31,6 +31,7 @@ class DramTest : public App {
   DramTest(Board &board);
   ~DramTest();
 
+  void waitUntilDone(float timeout);
   bool start(unsigned int input, unsigned int addr);
 
   static const unsigned int MAX_SIZE = RAM_WORDS*sizeof(boardWord_t)/sizeof(appWord_t);

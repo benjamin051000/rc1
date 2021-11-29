@@ -5,7 +5,8 @@
 #define _APP_H_
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
+#include <cstring>
 #include <cmath>
 
 #include "Board.h"

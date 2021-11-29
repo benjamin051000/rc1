@@ -65,13 +65,14 @@ bool convolveHW(Convolve &convolve,
   try {
       
       convolve.start(input, inputSize, kernel, kernelSize);
-      while(!convolve.isDone());
+      convolve.waitUntilDone(2.0);
+      //while(!convolve.isDone());
       convolve.getOutput(output, outputSize);  
   }
-  catch(...) {
+  catch(TimeoutException e) {
       
-      fflush(stderr);   
-      return false;
+    cerr << "Error: Done was not asserted before timeout." << endl;
+    throw e;
   }
   
   return true;  

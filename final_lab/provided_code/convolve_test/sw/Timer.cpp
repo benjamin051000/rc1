@@ -30,5 +30,8 @@ void Timer::stop() {
 
 double Timer::elapsedTime() const {
 
-  return stopTime-startTime;
+  if (stopTime > 0.0) 
+    return stopTime-startTime;
+
+  return currentTime()-startTime;
 }

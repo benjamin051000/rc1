@@ -8,6 +8,7 @@
 #include <cstdlib>
 
 #include "DramTest.h"
+#include "Timer.h"
 
 using namespace std;
 
@@ -17,6 +18,21 @@ DramTest::DramTest(Board &board) : App(board) {
 
 DramTest::~DramTest() {
   
+}
+
+void DramTest::waitUntilDone(float timeout) {
+
+  Timer waitTime;
+  unsigned value = 0;
+  waitTime.start();
+  while (!value && waitTime.elapsedTime() < timeout) {
+    this->read(&value, DONE_ADDR, 1);
+  }
+  waitTime.stop();
+
+  if (value == 0) {
+    throw TimeoutException();
+  }
 }
 
 bool DramTest::start(unsigned int size, unsigned int addr) {
@@ -31,7 +47,7 @@ bool DramTest::start(unsigned int size, unsigned int addr) {
   
   // change to test smaller amounts  
   unsigned config = (dmaWords << ADDR_WIDTH) | addr;
-  appWord_t go, done, rst;
+  appWord_t go, rst/*, done*/;
   appWord_t *input, *output;
   
   input = (appWord_t *) safeMalloc(size*sizeof(appWord_t));
@@ -64,7 +80,15 @@ bool DramTest::start(unsigned int size, unsigned int addr) {
   write(&go, GO_ADDR, 1);
   
   // wait for the board to assert done
-  done = 0;
+  try {
+    waitUntilDone(2.0);
+  }
+  catch(TimeoutException e) {
+   
+    cerr << "Error: Done was not asserted before timeout." << endl;
+    throw e;
+  }
+  /*done = 0;
   while (!done) {
     read(done, DONE_ADDR);
     
@@ -72,7 +96,7 @@ bool DramTest::start(unsigned int size, unsigned int addr) {
     // wait 100 ms
     usleep(100000); 
 #endif
-  }
+}*/
   
   // configure dma transfer from ram1 to software
   write(config, RAM1_CONFIG_ADDR);

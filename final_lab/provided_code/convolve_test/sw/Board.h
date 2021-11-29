@@ -26,6 +26,12 @@ enum MemId {
   MEM_LAST  // this is an invalid memory and is used for bounds checking only
 };
 
+class TimeoutException : public std::exception {
+  const char * what () const throw () {
+    return "Timeout Exception";
+  }
+};
+
 
 typedef unsigned boardWord_t;
 
@@ -38,6 +44,7 @@ class Board {
   
   virtual bool write(unsigned *data, unsigned long addr, unsigned long words);
   virtual bool read(unsigned *data, unsigned long addr, unsigned long words);
+  virtual void waitUntilNotZero(unsigned long addr, float timeout);
 
   // number of bytes in a page
   const unsigned PAGE_SIZE;
