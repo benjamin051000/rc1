@@ -86,8 +86,6 @@ begin
 
             when SAVE_INPUTS =>
                    save_inputs_en <= '1';
-                   in_en <= '1';
-                   
                    next_state <= COUNT_LOOP;
                 
             when COUNT_LOOP =>
@@ -114,6 +112,6 @@ begin
     end process;
 
     --output address to dram, simply an addition of the start address reg and count reg
-    rd_addr <= std_logic_vector(unsigned(count) + unsigned(start_addr_reg)));
+    rd_addr <= std_logic_vector(resize(unsigned(count), 15) + unsigned(start_addr_reg));
 
 end rtl;

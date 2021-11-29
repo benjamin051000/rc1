@@ -37,6 +37,8 @@ architecture arch of dram_rd_ram0_custom is
     signal size_sig              : std_logic_vector(16 downto 0);
     signal start_addr_sig        : std_logic_vector(14 downto 0);
     signal fifo_prog_full_sig    : std_logic;
+    signal not_valid_sig         : std_logic;
+    signal go_after_handshake    : std_logic;
 
 begin
 
@@ -47,9 +49,9 @@ begin
             clk_dest  => dram_clk,
             rst       => rst,
             go        => go,
-            delay_ack => open,
-            rcv       => open,
-            ack       => open
+            delay_ack => '0', --dont delay ack
+            rcv       => go_after_handshake,
+            ack       => open --not used
         );
 
     U_SIZE_REG : entity work.reg_custom
@@ -59,7 +61,7 @@ begin
         port map(
             clk => go, --store size whenever go is asserted
             rst => rst,
-            en => C_1, --enabled always
+            en => '1', --enabled always
             input => size,
             output => size_sig --to address generator
         );
@@ -71,7 +73,7 @@ begin
         port map(
             clk => go, --store size whenever go is asserted
             rst => rst,
-            en => C_1, --enabled always
+            en => '1', --enabled always
             input => start_addr,
             output => start_addr_sig --to address generator
         );
@@ -80,7 +82,7 @@ begin
         port map(
             clk    => dram_clk,
             rst    => rst,
-            go     => open, --comes from handshake
+            go     => go_after_handshake, --comes from handshake
             size   => size_sig,
             start_addr => start_addr_sig,
             done   => open, --not used
@@ -95,7 +97,7 @@ begin
             clk_src     => dram_clk,
             clk_dest    => user_clk,
             rst         => rst,
-            empty       => (not valid); --data is valid when the fifo is not empty
+            empty       => not_valid_sig, --data is valid when the fifo is not empty
             full        => open, --not used
             prog_full   => fifo_prog_full_sig, --to address gen, tells it when to stop 
             rd          => rd_en, 
@@ -112,5 +114,7 @@ begin
             size  => size_sig,
             done => done
         );
+
+    valid <= not_valid_sig;
 
 end arch;

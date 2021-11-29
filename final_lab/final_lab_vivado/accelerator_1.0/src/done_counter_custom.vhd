@@ -16,21 +16,21 @@ end entity;
 
 architecture arch of done_counter_custom is
 
-    signal count : integer range 0 to 131071; --2^17 - 1
+    signal count : std_logic_vector(size'range);
 
 begin
 
     process(clk, rst)
     begin
         if (rst = '1') then
-            count <= 0;
+            count <= (others => '0');
         elsif (rising_edge(clk)) then
             if (en = '1') then
                 if (count = size) then
-                    count <= 0;
+                    count <= (others => '0');
                     done <= '1';
                 else
-                    count <= count + 1;
+                    count <= std_logic_vector(unsigned(count) + to_unsigned(1, 17));
                 end if;
             end if;
         end if;
