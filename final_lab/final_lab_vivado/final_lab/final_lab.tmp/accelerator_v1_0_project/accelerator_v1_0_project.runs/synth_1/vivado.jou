@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Nov 29 21:59:44 2021
+# Process ID: 14648
+# Current directory: c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log accelerator_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator_v1_0.tcl
+# Log file: c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/synth_1/accelerator_v1_0.vds
+# Journal file: c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.tmp/accelerator_v1_0_project/accelerator_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator_v1_0.tcl -notrace

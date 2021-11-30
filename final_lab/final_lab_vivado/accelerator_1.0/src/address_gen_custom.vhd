@@ -68,7 +68,7 @@ begin
         end if;
     end process;
 
-    process(state, go, size, start_addr, count, dram_ready)
+    process(state, go, size, start_addr, count, dram_ready, fifo_prog_full)
     begin
         
         -- Default cases
@@ -91,12 +91,15 @@ begin
             when COUNT_LOOP =>
 
                 if(dram_ready = '1') then
-                    rd_en <= '1'; -- addresses are valid now
+                    if(fifo_prog_full = '0') then 
 
-                    -- Increment the counter
-                    count_up <= '1';
-                    if(count = size) then
-                        next_state <= WAIT_FOR_GO_N;
+                        rd_en <= '1'; -- addresses are valid now
+
+                        -- Increment the counter
+                        count_up <= '1';
+                        if(count = size) then
+                            next_state <= WAIT_FOR_GO_N;
+                        end if;
                     end if;
                 end if;
             

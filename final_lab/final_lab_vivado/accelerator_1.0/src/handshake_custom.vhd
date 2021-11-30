@@ -56,18 +56,18 @@ begin
         when S_READY =>
           if (go = '1') then
             temp_signal_go_side <= '1'; --extra signal for dual flop
-            send_s         <=  temp_signal_go_side; -- send GO to other handshake
             state_src <= S_WAIT_FOR_ACK;
           end if;
 
         when S_WAIT_FOR_ACK =>
+            send_s         <=  temp_signal_go_side; -- send GO to other handshake
           if (ack_s = '1') then
             temp_signal_go_side <= '0';
-            send_s <= temp_signal_go_side; -- dual-flop here
             state_src <= S_RESET_ACK;
           end if;
 
         when S_RESET_ACK =>
+         send_s <= temp_signal_go_side; -- dual-flop here
           if (ack_s = '0') then
             ack            <= '1';
             state_src <= S_READY;
@@ -97,6 +97,7 @@ begin
       case state_dest is
         when S_READY =>
           -- if source is sending data, assert rcv (received)
+          ack_s      <= temp_signal_ack_side;
           if (send_s = '1') then
             rcv        <= '1';
             state_dest <= S_SEND_ACK;
@@ -106,15 +107,13 @@ begin
           -- send ack unless it is delayed
           if (delay_ack = '0') then
             temp_signal_ack_side <= '1';  -- Send ACK to first domain
-            ack_s      <= temp_signal_ack_side; -- dual-flop on this ACK signal
             state_dest <= S_RESET_ACK;
           end if;
 
         when S_RESET_ACK =>
-          -- send ack unless it is delayed
+          ack_s      <= temp_signal_ack_side; -- dual-flop on this ACK signal
           if (send_s = '0') then
             temp_signal_ack_side <= '0'; 
-            ack_s      <= temp_signal_ack_side; --dual-flop here as well
             state_dest <= S_READY;
           end if;
 

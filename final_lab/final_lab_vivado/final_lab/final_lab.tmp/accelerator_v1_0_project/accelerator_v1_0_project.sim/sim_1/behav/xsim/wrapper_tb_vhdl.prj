@@ -1,0 +1,26 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../accelerator_1.0/src/config_pkg.vhd" \
+"../../../../../../../accelerator_1.0/src/user_pkg.vhd" \
+"../../../../../../../accelerator_1.0/src/memory_map.vhd" \
+"../../../../../../../accelerator_1.0/src/ctrl.vhd" \
+"../../../../../../../accelerator_1.0/src/user_app.vhd" \
+"../../../../../../../accelerator_1.0/src/math_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/ram.vhd" \
+"../../../../../../../accelerator_1.0/src/delay.vhd" \
+"../../../../../../../accelerator_1.0/src/dram_model.vhd" \
+"../../../../../../../accelerator_1.0/src/wrapper.vhd" \
+"../../../../../../../accelerator_1.0/src/address_gen_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/done_counter_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/handshake_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/reg_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo_32_to_16.vhd" \
+"../../../../../../../accelerator_1.0/src/fifo_32_to_16_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/dram_rd_ram0_custom.vhd" \
+"../../../../../../../accelerator_1.0/src/dram_rd_ram1_0_funcsim.vhdl" \
+"../../../../../../../accelerator_1.0/src/dram_wr_ram0_0_funcsim.vhdl" \
+"../../../../../../../accelerator_1.0/src/dram_wr_ram1_0_funcsim.vhdl" \
+"../../../../../../../accelerator_1.0/src/wrapper_tb.vhd" \
+
+# Do not sort compile order
+nosort

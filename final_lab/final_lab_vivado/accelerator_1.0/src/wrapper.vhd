@@ -113,7 +113,7 @@ architecture default of wrapper is
              );
     end component;
 
-    component dram_rd_ram1
+    component dram_rd_ram1_0
         port(dram_clk   : in  std_logic;
              user_clk   : in  std_logic;
              rst        : in  std_logic;
@@ -136,7 +136,7 @@ architecture default of wrapper is
              );
     end component;
 
-    component dram_wr_ram0
+    component dram_wr_ram0_0
         port(dram_clk   : in  std_logic;
              user_clk   : in  std_logic;
              rst        : in  std_logic;
@@ -158,7 +158,7 @@ architecture default of wrapper is
     end component;
 
 
-    component dram_wr_ram1
+    component dram_wr_ram1_0
         port(dram_clk   : in  std_logic;
              user_clk   : in  std_logic;
              rst        : in  std_logic;
@@ -290,7 +290,7 @@ begin
             dram_rd_flush => dram0_rd_flush);
 
 
-    U_DRAM0_WR : dram_wr_ram0
+    U_DRAM0_WR : dram_wr_ram0_0
         port map (
                                         -- user dma control signals
             dram_clk   => clks(C_CLK_DRAM),
@@ -313,7 +313,7 @@ begin
             dram_wr_pending => dram0_wr_pending);
 
 
-    U_DRAM1_RD : dram_rd_ram1
+    U_DRAM1_RD : dram_rd_ram1_0
         port map (
                                         -- user dma control signals 
             dram_clk   => clks(C_CLK_DRAM),
@@ -338,7 +338,7 @@ begin
             dram_rd_flush => dram1_rd_flush);
 
 
-    U_DRAM1_WR : dram_wr_ram1
+    U_DRAM1_WR : dram_wr_ram1_0
         port map (
                                         -- user dma control signals
             dram_clk   => clks(C_CLK_DRAM),

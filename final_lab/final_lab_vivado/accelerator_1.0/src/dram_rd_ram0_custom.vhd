@@ -103,7 +103,7 @@ begin
             rd          => rd_en, 
             wr          => dram_rd_valid,
             data_in     => dram_rd_data,
-            data_out    => data --todo?? need to check this data for clipping before giving it to user_app
+            data_out    => data
         );
 
     U_DONE_COUNTER : entity work.done_counter_custom
@@ -115,6 +115,7 @@ begin
             done => done
         );
 
-    valid <= not_valid_sig;
+    valid <= not not_valid_sig;
+    dram_rd_flush <= go_after_handshake;
 
 end arch;
