@@ -1,5 +1,6 @@
--- Greg Stitt
--- University of Florida
+--John Shoemaker and Benjamin Wheeler
+--EEL5721 Reconfigurable Computing 
+--Final Project
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -128,6 +129,16 @@ begin
             mem_out_clear => ram1_wr_clear,
             mem_out_done  => ram1_wr_done,
             done          => done);
+
+    U_PIPELINE : entity work.mult_add_tree
+        port map (
+            clk    => clks(C_CLK_USER),
+            rst    => rst,
+            en     => '1',
+            input1 => open, --to sig/kernel buff
+            input2 => open, --to sig/kernal buff
+            output => open --to ram1 write data
+        );
 
     ram0_rd_rd_en <= ram0_rd_valid and ram1_wr_ready;
     ram0_rd_size  <= size;
