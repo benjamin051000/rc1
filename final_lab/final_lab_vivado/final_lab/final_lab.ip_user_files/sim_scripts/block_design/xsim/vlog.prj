@@ -1,0 +1,10 @@
+verilog xil_defaultlib --include "D:/XiLink/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../final_lab.gen/sources_1/bd/block_design/ipshared/ec67/hdl" --include "../../../../final_lab.gen/sources_1/bd/block_design/ipshared/f42d/hdl" \
+"../../../bd/block_design/ip/block_design_processing_system7_0_0/sim/block_design_processing_system7_0_0.v" \
+"../../../bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/sim/fifo_32.v" \
+"../../../bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/sim/fifo_32_prog_full.v" \
+"../../../bd/block_design/ip/block_design_auto_pc_0/sim/block_design_auto_pc_0.v" \
+"../../../bd/block_design/sim/block_design.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

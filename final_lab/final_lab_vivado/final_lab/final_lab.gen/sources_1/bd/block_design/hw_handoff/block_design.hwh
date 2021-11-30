@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 29 12:37:39 2021" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 30 09:53:20 2021" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="block_design" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -159,7 +159,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="3" FULLNAME="/accelerator_0" HWVERSION="1.0" INSTANCE="accelerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="accelerator" VLNV="ufl.edu:user:accelerator:1.0">
+    <MODULE COREREVISION="6" FULLNAME="/accelerator_0" HWVERSION="1.0" INSTANCE="accelerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="accelerator" VLNV="ufl.edu:user:accelerator:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>

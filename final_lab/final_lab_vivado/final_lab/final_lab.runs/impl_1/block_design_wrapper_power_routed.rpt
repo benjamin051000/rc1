@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Mon Nov 29 12:40:44 2021
+| Date             : Tue Nov 30 09:57:12 2021
 | Host             : DESKTOP-UNKKMEU running 64-bit major release  (build 9200)
 | Command          : report_power -file block_design_wrapper_power_routed.rpt -pb block_design_wrapper_power_summary_routed.pb -rpx block_design_wrapper_power_routed.rpx
 | Design           : block_design_wrapper
@@ -52,16 +52,16 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.015 |        6 |       --- |             --- |
-| Slice Logic             |     0.005 |     3616 |       --- |             --- |
-|   LUT as Logic          |     0.004 |      993 |     53200 |            1.87 |
-|   Register              |    <0.001 |     1874 |    106400 |            1.76 |
+| Clocks                  |     0.016 |        6 |       --- |             --- |
+| Slice Logic             |     0.005 |     3635 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     1005 |     53200 |            1.89 |
+|   Register              |    <0.001 |     1880 |    106400 |            1.77 |
 |   LUT as Shift Register |    <0.001 |       96 |     17400 |            0.55 |
-|   CARRY4                |    <0.001 |       65 |     13300 |            0.49 |
+|   CARRY4                |    <0.001 |       67 |     13300 |            0.50 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |      288 |       --- |             --- |
-| Signals                 |     0.013 |     2696 |       --- |             --- |
-| Block RAM               |     0.173 |       66 |       140 |           47.14 |
+|   Others                |     0.000 |      290 |       --- |             --- |
+| Signals                 |     0.013 |     2703 |       --- |             --- |
+| Block RAM               |     0.172 |       66 |       140 |           47.14 |
 | PS7                     |     1.530 |        1 |       --- |             --- |
 | Static Power            |     0.154 |          |           |                 |
 | Total                   |     1.890 |          |           |                 |

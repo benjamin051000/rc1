@@ -1,0 +1,24 @@
+vhdl xil_defaultlib  \
+"../../../bd/block_design/ip/block_design_rst_ps7_0_125M_0/sim/block_design_rst_ps7_0_125M_0.vhd" \
+"../../../bd/block_design/ipshared/d363/src/config_pkg.vhd" \
+"../../../bd/block_design/ipshared/d363/src/user_pkg.vhd" \
+"../../../bd/block_design/ipshared/d363/src/memory_map.vhd" \
+"../../../bd/block_design/ipshared/d363/src/ctrl.vhd" \
+"../../../bd/block_design/ipshared/d363/src/user_app.vhd" \
+"../../../bd/block_design/ipshared/d363/src/math_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/ram.vhd" \
+"../../../bd/block_design/ipshared/d363/src/delay.vhd" \
+"../../../bd/block_design/ipshared/d363/src/dram_model.vhd" \
+"../../../bd/block_design/ipshared/d363/src/wrapper.vhd" \
+"../../../bd/block_design/ipshared/d363/hdl/accelerator_v1_0_S00_AXI.vhd" \
+"../../../bd/block_design/ipshared/d363/src/address_gen_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/done_counter_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/handshake_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/reg_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/fifo_32_to_16.vhd" \
+"../../../bd/block_design/ipshared/d363/src/fifo_32_to_16_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/src/dram_rd_ram0_custom.vhd" \
+"../../../bd/block_design/ipshared/d363/hdl/accelerator_v1_0.vhd" \
+"../../../bd/block_design/ip/block_design_accelerator_0_0/sim/block_design_accelerator_0_0.vhd" \
+
+nosort
