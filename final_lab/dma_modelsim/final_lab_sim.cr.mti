@@ -1,82 +1,23 @@
-C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/address_gen_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/address_gen_custom.vhd
+C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling package math_custom
+-- Compiling package body math_custom
+-- Loading package math_custom
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package config_pkg
--- Loading package user_pkg
--- Compiling entity address_gen_custom
--- Compiling architecture rtl of address_gen_custom
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/handshake_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/handshake_custom.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity handshake_custom
--- Compiling architecture TRANSITIONAL of handshake_custom
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/fifo_32_to_16_custom.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/fifo_32_to_16_custom.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity fifo_32_to_16_custom
--- Compiling architecture STR of fifo_32_to_16_custom
-** Error: (vcom-11) Could not find work.fifo32_to_16.
-** Error (suppressible): C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/fifo_32_to_16_custom.vhd(26): (vcom-1195) Cannot find expanded name "work.fifo32_to_16".
-** Error: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/fifo_32_to_16_custom.vhd(26): Unknown expanded name.
-** Note: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/fifo_32_to_16_custom.vhd(42): VHDL Compiler exiting
-
-} {8.0 9.0 10.0 11.0} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/dram_rd_ram0_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/dram_rd_ram0_custom.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity dram_rd_ram0_custom
--- Compiling architecture arch of dram_rd_ram0_custom
--- Loading entity handshake_custom
--- Loading entity reg_custom
--- Loading package NUMERIC_STD
--- Loading package config_pkg
--- Loading package user_pkg
--- Loading entity address_gen_custom
--- Loading entity fifo_32_to_16_custom
--- Loading entity done_counter_custom
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/done_counter_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/done_counter_custom.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity done_counter_custom
--- Compiling architecture arch of done_counter_custom
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/config_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/config_pkg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling package config_pkg
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package config_pkg
+-- Loading package MATH_REAL
+-- Loading package math_custom
 -- Compiling package user_pkg
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity reg_custom
--- Compiling architecture BHV of reg_custom
 
 } {} {}}

@@ -64,13 +64,13 @@ architecture unsigned_arch of add_tree is
   -- converts from input_array to std_logic_vector
   function vectorize(input        : input_array;
                      arraySize    : natural;
-                     elementWidth : positive) return std_logic_vector is
+                     elementWidth : positive) 
+                     return std_logic_vector is
     variable temp : std_logic_vector(arraySize*elementWidth-1 downto 0);
   begin
     for i in 0 to arraySize-1 loop
       temp((i+1)*elementWidth-1 downto i*elementWidth) := input(input'left+i);
     end loop;
-
     return temp;
   end function;
 

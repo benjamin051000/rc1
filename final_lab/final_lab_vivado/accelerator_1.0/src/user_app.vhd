@@ -130,7 +130,12 @@ begin
             mem_out_done  => ram1_wr_done,
             done          => done);
 
-    U_PIPELINE : entity work.mult_add_tree
+    U_PIPELINE : entity work.mult_add_tree(unsigned_arch)
+        generic map(
+            num_inputs => 128,
+            input1_width => 16,
+            input2_width => 16
+        );
         port map (
             clk    => clks(C_CLK_USER),
             rst    => rst,
@@ -138,6 +143,40 @@ begin
             input1 => open, --to sig/kernel buff
             input2 => open, --to sig/kernal buff
             output => open --to ram1 write data
+        );
+
+    U_SIGNAL_BUFFER : entity work.sliding_buffer
+        generic map(
+            num_outputs => 128,
+            input_width => 16,
+            output_width => 16
+        );
+        port map(
+            clk      => clks(C_CLK_USER),
+            rst      => rst,
+            wr_en    => open,
+            full     => open,
+            input_data => open,
+            rd_en      => open,
+            empty      => open,
+            output_data   => open
+        );
+
+    U_KERNEL_BUFFER : entity work.sliding_buffer
+        generic map(
+            num_outputs => 128,
+            input_width => 16,
+            output_width => 16
+        );
+        port map(
+            clk      => clks(C_CLK_USER),
+            rst      => rst,
+            wr_en    => open,
+            full     => open,
+            input_data => open,
+            rd_en      => '0',
+            empty      => open,
+            output_data   => open
         );
 
     ram0_rd_rd_en <= ram0_rd_valid and ram1_wr_ready;

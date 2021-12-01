@@ -6,6 +6,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 use work.config_pkg.all;
+use work.math_custom.all; -- for bitsNeeded()
 
 package user_pkg is
 

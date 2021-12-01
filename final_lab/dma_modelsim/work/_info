@@ -234,14 +234,60 @@ R34
 !i113 1
 R14
 R15
+Pmath_custom
+Z35 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R3
+R4
+R5
+!i122 187
+Z36 w1446242056
+R6
+Z37 8C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd
+Z38 FC:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd
+l0
+Z39 L11 1
+V`?33ekQjYfoH^FVPnSn^b2
+!s100 GQj2k^O]IDVHhD52B=^E83
+R9
+32
+b1
+Z40 !s110 1638322759
+!i10b 1
+Z41 !s108 1638322759.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd|
+Z43 !s107 C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd|
+!i113 1
+R14
+R15
+Bbody
+Z44 DPx4 work 11 math_custom 0 22 `?33ekQjYfoH^FVPnSn^b2
+R35
+R3
+R4
+R5
+!i122 187
+l0
+L57 1
+VHmIANEo_YKTjiBMkO3^X33
+!s100 CRNP9>4Li2RUd`;4izdND3
+R9
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R14
+R15
 Ereg_custom
-Z35 w1638193050
+Z45 w1638193050
 R4
 R5
 !i122 137
 R6
-Z36 8C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd
-Z37 FC:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd
+Z46 8C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd
+Z47 FC:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd
 l0
 L8 1
 V?^faUlVj>NoCCNjTO^<j;0
@@ -251,8 +297,8 @@ R9
 R10
 !i10b 1
 R11
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd|
-Z39 !s107 C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd|
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd|
+Z49 !s107 C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/reg_custom.vhd|
 !i113 1
 R14
 R15
@@ -270,32 +316,137 @@ R9
 R10
 !i10b 1
 R11
-R38
-R39
+R48
+R49
+!i113 1
+R14
+R15
+Esignal_buffer
+w1638322420
+R35
+R44
+R2
+Z50 DPx4 work 8 user_pkg 0 22 d7kiFWbCSKTlkJYYaEjX91
+R3
+R4
+R5
+!i122 174
+R6
+Z51 8C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd
+Z52 FC:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd
+l0
+Z53 L10 1
+VfO9c[4:^Q]@YGLe;9[OlC2
+!s100 @VQ1n6CYcJVeh?PfA[kNL0
+R9
+32
+!s110 1638322688
+!i10b 1
+!s108 1638322688.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd|
+Z55 !s107 C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd|
+!i113 1
+R14
+R15
+Aarch
+w1638322720
+R35
+R44
+R2
+R50
+R3
+R4
+R5
+DEx4 work 13 signal_buffer 0 22 fO9c[4:^Q]@YGLe;9[OlC2
+!i122 180
+l55
+Z56 L33 96
+VJ@>m]jK^;CAa7cC5i0DhS0
+!s100 VdC;6gNj:mid0Sa?PQ_Rn1
+R9
+32
+!s110 1638322723
+!i10b 1
+!s108 1638322723.000000
+R54
+R55
+!i113 1
+R14
+R15
+Esliding_buffer
+Z57 w1638322756
+R35
+R44
+R2
+R50
+R3
+R4
+R5
+!i122 188
+R6
+R51
+R52
+l0
+R53
+V_i`?_za>?h?Yn[Igz3cja0
+!s100 75fEf@L@7VOjPFL?z86BN2
+R9
+32
+Z58 !s110 1638322760
+!i10b 1
+R41
+R54
+R55
+!i113 1
+R14
+R15
+Aarch
+R35
+R44
+R2
+R50
+R3
+R4
+R5
+DEx4 work 14 sliding_buffer 0 22 _i`?_za>?h?Yn[Igz3cja0
+!i122 188
+l55
+R56
+Vd3=]DaFJ7FbmE^X:1gzlC1
+!s100 Gkk1BRhOf4@[aBD7`dG^J1
+R9
+32
+R58
+!i10b 1
+R41
+R54
+R55
 !i113 1
 R14
 R15
 Puser_pkg
+R35
+R44
 R2
 R3
 R4
 R5
-!i122 138
-w1447293530
+!i122 186
+w1638321798
 R6
-8C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd
-FC:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd
+8C:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd
+FC:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd
 l0
-L10 1
-V4QOLXa6_NVfN17bNJ`5D<2
-!s100 gTTXIJK:L=1[AB4J^hi=b2
+R39
+Vd7kiFWbCSKTlkJYYaEjX91
+!s100 zdfim?3NHQ>MhCk:EikYk2
 R9
 32
-R10
+R40
 !i10b 1
-R11
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd|
-!s107 C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd|
+R41
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd|
+!s107 C:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd|
 !i113 1
 R14
 R15
