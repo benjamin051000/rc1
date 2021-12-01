@@ -168,7 +168,7 @@ begin
     -- if there are an odd number of inputs, we need to delay the right
     -- subtree by the difference in the depth of the left and right
     U_ALIGN_ODD : if num_inputs mod 2 /= 0 generate
-      U_DELAY : entity work.add_tree_delay
+      U_DELAY : entity work.delay
         generic map (
           cycles => TREE_DEPTH_DIFFERENCE,
           width  => right_tree_out_unaligned'length,
@@ -324,7 +324,7 @@ begin
     -- if there are an odd number of inputs, we need to delay the right
     -- subtree by the difference in the depth of the left and right
     U_ALIGN_ODD : if num_inputs mod 2 /= 0 generate
-      U_DELAY : entity work.add_tree_delay
+      U_DELAY : entity work.delay
         generic map (
           cycles => TREE_DEPTH_DIFFERENCE,
           width  => right_tree_out_unaligned'length,

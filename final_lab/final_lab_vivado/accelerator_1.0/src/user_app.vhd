@@ -77,6 +77,7 @@ architecture default of user_app is
 
     --for signal buffer
     signal sig_buff_full    : std_logic;
+    signal sig_buff_wr_en   : std_logic;
 
     --for kernel buffer
     signal kernel_ld_sig         : std_logic;
@@ -89,8 +90,9 @@ architecture default of user_app is
 
     
     --pipeline output
-    signal pipeline_out_sig      : std_logic_vector(32+clog2(128)-1 downto 0))
-    signal valid_chain_sig       : std_logic;
+    signal pipeline_out_sig      : std_logic_vector(38 downto 0);
+    signal valid_chain_in_sig       : std_logic_vector(1 downto 0);
+    signal valid_chain_out_sig       : std_logic_vector(1 downto 0);
 
 begin
 
@@ -154,7 +156,7 @@ begin
             num_inputs => 128,
             input1_width => 16,
             input2_width => 16
-        );
+        )
         port map (
             clk    => clks(C_CLK_USER),
             rst    => rst,
@@ -169,11 +171,11 @@ begin
             num_outputs => 128,
             input_width => 16,
             output_width => 16
-        );
+        )
         port map(
             clk      => clks(C_CLK_USER),
             rst      => rst,
-            wr_en    => ram0_rd_rd_en,
+            wr_en    => sig_buff_wr_en,
             full     => sig_buff_full,
             input_data => ram0_rd_data, --from dma controller
             rd_en      => sig_buff_full, --todo, read only when the signal buffer is full
@@ -186,7 +188,7 @@ begin
             num_outputs => 128,
             input_width => 16,
             output_width => 16
-        );
+        )
         port map(
             clk      => clks(C_CLK_USER),
             rst      => rst,
@@ -200,15 +202,15 @@ begin
 
     U_VALID_DELAY : entity work.delay
         generic map(
-            cycles => 1 --todo,
-            width => 1,
-            init => "0");
+            cycles => 128, --todo,
+            width => 2,
+            init => "00")
         port map(
             clk      => clks(C_CLK_USER),
             rst      => rst,
             en       => '1',
-            input    => kernel_buff_full_sig and sig_buff_full,
-            output   => valid_chain_sig
+            input    => valid_chain_in_sig,
+            output   => valid_chain_out_sig 
         );
 
     ram0_rd_rd_en <= ram0_rd_valid and (not sig_buff_full);
@@ -217,8 +219,11 @@ begin
     
     ram1_wr_size  <= signal_size;
     ram1_wr_addr  <= (others => '0'); --todo, always write to addres 0?
-    ram1_wr_data <= (others => '1') when to_integer(shift_right(unsigned(pipeline_out_sig), 32)) > 0 else pipeline_out_sig(31 downto 0); -- pog???
-    ram1_wr_valid <= valid_chain_sig; -- end of valid chain
+    ram1_wr_data <= (others => '1') when to_integer(shift_right(unsigned(pipeline_out_sig), 16)) > 0 else pipeline_out_sig(15 downto 0); -- pog???
+    ram1_wr_valid <= valid_chain_out_sig(0); -- end of valid chain
+
+    valid_chain_in_sig <= '0' & (kernel_buff_full_sig and sig_buff_full);
+    sig_buff_wr_en <=  ram0_rd_valid and (not sig_buff_full);
 
     -- pipeline output type and width is......
     -- std_logic_vector(input1_width+input2_width+clog2(num_inputs)-1 downto 0))
