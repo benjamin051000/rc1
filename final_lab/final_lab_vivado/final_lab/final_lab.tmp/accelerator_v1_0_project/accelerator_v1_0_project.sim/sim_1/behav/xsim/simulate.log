@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Note: Done signal not asserted before timeout.
+Time: 258645 ns  Iteration: 0  Process: /wrapper_tb/line__66  File: c:/users/john/desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/wrapper_convolve_tb.vhd
+Note: SIMULATION FINISHED!!!
+Time: 261025 ns  Iteration: 0  Process: /wrapper_tb/line__66  File: c:/users/john/desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/wrapper_convolve_tb.vhd

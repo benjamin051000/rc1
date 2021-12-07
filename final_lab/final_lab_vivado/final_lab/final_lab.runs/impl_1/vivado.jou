@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Nov 30 09:55:48 2021
-# Process ID: 1508
+# Start of session at: Mon Dec  6 11:31:11 2021
+# Process ID: 1872
 # Current directory: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.runs/impl_1
 # Command line: vivado.exe -log block_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source block_design_wrapper.tcl -notrace
 # Log file: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.runs/impl_1/block_design_wrapper.vdi

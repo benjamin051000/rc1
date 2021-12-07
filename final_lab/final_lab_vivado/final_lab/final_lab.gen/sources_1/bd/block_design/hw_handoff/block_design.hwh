@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 30 09:53:20 2021" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  6 11:28:48 2021" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="block_design" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -159,7 +159,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="6" FULLNAME="/accelerator_0" HWVERSION="1.0" INSTANCE="accelerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="accelerator" VLNV="ufl.edu:user:accelerator:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/accelerator_0" HWVERSION="1.0" INSTANCE="accelerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="accelerator" VLNV="ufl.edu:user:accelerator:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -193,6 +193,16 @@
         <PORT DIR="I" NAME="fclk3" SIGIS="undef" SIGNAME="processing_system7_0_FCLK_CLK3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_125M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="19" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="accelerator_0_s00_axi_awaddr">
@@ -288,16 +298,6 @@
         <PORT DIR="I" NAME="s00_axi_rready" SIGIS="undef" SIGNAME="accelerator_0_s00_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_125M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

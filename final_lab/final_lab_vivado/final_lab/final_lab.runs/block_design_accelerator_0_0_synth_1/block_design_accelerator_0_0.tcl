@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "block_design_accelerator_0_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -93,10 +92,6 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_ip -quiet C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.srcs/sources_1/bd/block_design/ip/block_design_accelerator_0_0/block_design_accelerator_0_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/fifo_32_prog_full.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/fifo_32_prog_full_clocks.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,8 +102,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 

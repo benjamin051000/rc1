@@ -1,4 +1,122 @@
-C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd
+C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/mult_add_tree.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/mult_add_tree.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package math_custom
+-- Compiling entity mult_add_tree
+-- Compiling architecture unsigned_arch of mult_add_tree
+-- Loading entity add_tree
+-- Compiling architecture signed_arch of mult_add_tree
+-- Loading entity mult_add_tree
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/ctrl.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/ctrl.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ctrl
+-- Compiling architecture bhv of ctrl
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package config_pkg
+-- Loading package MATH_REAL
+-- Loading package math_custom
+-- Loading package user_pkg
+-- Compiling entity memory_map
+-- Compiling architecture BHV of memory_map
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(157): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(160): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(163): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(166): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(172): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(179): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(214): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(218): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(222): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(226): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Warning: C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/memory_map.vhd(230): (vcom-1937) Choice in CASE statement alternative must be locally static.
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_app.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_app.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package config_pkg
+-- Loading package MATH_REAL
+-- Loading package math_custom
+-- Loading package user_pkg
+-- Compiling entity user_app
+-- Compiling architecture default of user_app
+-- Loading entity memory_map
+-- Loading entity ctrl
+-- Loading entity mult_add_tree
+-- Loading entity sliding_buffer
+-- Loading entity delay
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/sliding_buffer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package config_pkg
+-- Loading package math_custom
+-- Loading package user_pkg
+-- Compiling entity sliding_buffer
+-- Compiling architecture arch of sliding_buffer
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/delay.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/delay.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity delay
+-- Compiling architecture FF of delay
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/config_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/config_pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package config_pkg
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/add_tree.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/add_tree.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity add_tree
+-- Compiling architecture unsigned_arch of add_tree
+-- Loading entity delay
+-- Compiling architecture signed_arch of add_tree
+-- Loading entity add_tree
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package config_pkg
+-- Loading package math_custom
+-- Compiling package user_pkg
+
+} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/math_custom.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -8,16 +126,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb 
 -- Compiling package math_custom
 -- Compiling package body math_custom
 -- Loading package math_custom
-
-} {} {}} C:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/accelerator_1.0/src/user_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\John\Desktop\reconfig\reconfig\final_lab\final_lab_vivado\accelerator_1.0\src\user_pkg.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package config_pkg
--- Loading package MATH_REAL
--- Loading package math_custom
--- Compiling package user_pkg
 
 } {} {}}

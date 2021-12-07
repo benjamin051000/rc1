@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -97,10 +96,6 @@ set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_rst_ps7_0_125M_0/block_design_rst_ps7_0_125M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_rst_ps7_0_125M_0/block_design_rst_ps7_0_125M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_rst_ps7_0_125M_0/block_design_rst_ps7_0_125M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32/fifo_32_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/fifo_32_prog_full.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_accelerator_0_0/src/fifo_32_prog_full/fifo_32_prog_full_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/ip/block_design_auto_pc_0/block_design_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/John/Desktop/reconfig/reconfig/final_lab/final_lab_vivado/final_lab/final_lab.gen/sources_1/bd/block_design/block_design_ooc.xdc]
 

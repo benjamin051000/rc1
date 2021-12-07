@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: ufl.edu:user:accelerator:1.0
--- IP Revision: 6
+-- IP Revision: 10
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -59,6 +59,8 @@ ENTITY block_design_accelerator_0_0 IS
     fclk1 : IN STD_LOGIC;
     fclk2 : IN STD_LOGIC;
     fclk3 : IN STD_LOGIC;
+    s00_axi_aclk : IN STD_LOGIC;
+    s00_axi_aresetn : IN STD_LOGIC;
     s00_axi_awaddr : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s00_axi_awvalid : IN STD_LOGIC;
@@ -77,9 +79,7 @@ ENTITY block_design_accelerator_0_0 IS
     s00_axi_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s00_axi_rvalid : OUT STD_LOGIC;
-    s00_axi_rready : IN STD_LOGIC;
-    s00_axi_aclk : IN STD_LOGIC;
-    s00_axi_aresetn : IN STD_LOGIC
+    s00_axi_rready : IN STD_LOGIC
   );
 END block_design_accelerator_0_0;
 
@@ -96,6 +96,8 @@ ARCHITECTURE block_design_accelerator_0_0_arch OF block_design_accelerator_0_0 I
       fclk1 : IN STD_LOGIC;
       fclk2 : IN STD_LOGIC;
       fclk3 : IN STD_LOGIC;
+      s00_axi_aclk : IN STD_LOGIC;
+      s00_axi_aresetn : IN STD_LOGIC;
       s00_axi_awaddr : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s00_axi_awvalid : IN STD_LOGIC;
@@ -114,17 +116,11 @@ ARCHITECTURE block_design_accelerator_0_0_arch OF block_design_accelerator_0_0 I
       s00_axi_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s00_axi_rvalid : OUT STD_LOGIC;
-      s00_axi_rready : IN STD_LOGIC;
-      s00_axi_aclk : IN STD_LOGIC;
-      s00_axi_aresetn : IN STD_LOGIC
+      s00_axi_rready : IN STD_LOGIC
     );
   END COMPONENT accelerator_v1_0;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN block_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI RRESP";
@@ -146,6 +142,10 @@ ARCHITECTURE block_design_accelerator_0_0_arch OF block_design_accelerator_0_0 I
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 20, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN block_design_processing_" & 
 "system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN block_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
 BEGIN
   U0 : accelerator_v1_0
     GENERIC MAP (
@@ -157,6 +157,8 @@ BEGIN
       fclk1 => fclk1,
       fclk2 => fclk2,
       fclk3 => fclk3,
+      s00_axi_aclk => s00_axi_aclk,
+      s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_awaddr => s00_axi_awaddr,
       s00_axi_awprot => s00_axi_awprot,
       s00_axi_awvalid => s00_axi_awvalid,
@@ -175,8 +177,6 @@ BEGIN
       s00_axi_rdata => s00_axi_rdata,
       s00_axi_rresp => s00_axi_rresp,
       s00_axi_rvalid => s00_axi_rvalid,
-      s00_axi_rready => s00_axi_rready,
-      s00_axi_aclk => s00_axi_aclk,
-      s00_axi_aresetn => s00_axi_aresetn
+      s00_axi_rready => s00_axi_rready
     );
 END block_design_accelerator_0_0_arch;
